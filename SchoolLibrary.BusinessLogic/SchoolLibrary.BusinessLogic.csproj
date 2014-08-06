@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF0F4965-5FBD-409B-AD6C-B9D27ADFAC5A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SchoolLibrary.BusinessLogic</RootNamespace>
+    <AssemblyName>SchoolLibrary.BusinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.4.4\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToExcel">
+      <HintPath>..\packages\LinqToExcel.1.7.1\lib\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\LinqToExcel.1.7.1\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion">
+      <HintPath>..\packages\LinqToExcel.1.7.1\lib\Remotion.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq">
+      <HintPath>..\packages\LinqToExcel.1.7.1\lib\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Interfaces">
+      <HintPath>..\packages\LinqToExcel.1.7.1\lib\Remotion.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Managers\AuthorManager.cs" />
+    <Compile Include="Managers\BookAuthorManager.cs" />
+    <Compile Include="Managers\BookInfoManager.cs" />
+    <Compile Include="Managers\DiskManager.cs" />
+    <Compile Include="Managers\ExcelManager.cs" />
+    <Compile Include="Managers\Interfaces\IAuthorManager.cs" />
+    <Compile Include="Managers\Interfaces\IBookAuthorManager.cs" />
+    <Compile Include="Managers\Interfaces\IBookInfoManager.cs" />
+    <Compile Include="Managers\Interfaces\IBookManager.cs" />
+    <Compile Include="Managers\Interfaces\IConsignmentManager.cs" />
+    <Compile Include="Managers\Interfaces\IDiskManager.cs" />
+    <Compile Include="Managers\Interfaces\IExcelManager.cs" />
+    <Compile Include="Managers\Interfaces\IInventoryManager.cs" />
+    <Compile Include="Managers\Interfaces\IItemManager.cs" />
+    <Compile Include="Managers\Interfaces\IMagazineManager.cs" />
+    <Compile Include="Managers\Interfaces\IReaderHistoryManager.cs" />
+    <Compile Include="Managers\Interfaces\IReaderManager.cs" />
+    <Compile Include="Managers\Interfaces\IRecommendationManager.cs" />
+    <Compile Include="Managers\Interfaces\IReservedItemManager.cs" />
+    <Compile Include="Managers\Interfaces\IScannedPageManager.cs" />
+    <Compile Include="Managers\Interfaces\ISearchBookManager.cs" />
+    <Compile Include="Managers\Interfaces\ISearchItemManager.cs" />
+    <Compile Include="Managers\Interfaces\ITagsManager.cs" />
+    <Compile Include="Managers\Interfaces\IUserManager.cs" />
+    <Compile Include="Managers\InventoryManager.cs" />
+    <Compile Include="Managers\ItemManager.cs" />
+    <Compile Include="Managers\MagazineManager.cs" />
+    <Compile Include="Managers\RecommendationManager.cs" />
+    <Compile Include="Managers\ReservedItemManager.cs" />
+    <Compile Include="Managers\ConsignmentManager.cs" />
+    <Compile Include="Managers\ScannedPageManager.cs" />
+    <Compile Include="Managers\SearchBookManager.cs" />
+    <Compile Include="Managers\ReaderHistoryManager.cs" />
+    <Compile Include="Managers\ReaderManager.cs" />
+    <Compile Include="Managers\SearchItemManager.cs" />
+    <Compile Include="Managers\TagsManager.cs" />
+    <Compile Include="Managers\UserManager.cs" />
+    <Compile Include="Other\PdfGenerator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolLibrary.BusinessModels\SchoolLibrary.BusinessModels.csproj">
+      <Project>{6eb12b1e-950d-4cc5-8e3a-fdcd1bbfa571}</Project>
+      <Name>SchoolLibrary.BusinessModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SchoolLibrary.DataAccess\SchoolLibrary.DataAccess.csproj">
+      <Project>{eb30ecd1-fee4-44bf-9115-ec28ee63f15d}</Project>
+      <Name>SchoolLibrary.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SchoolLibrary.ServiceAgents\SchoolLibrary.ServiceAgents.csproj">
+      <Project>{d82a261c-8423-4631-988c-280cb0b4ba8e}</Project>
+      <Name>SchoolLibrary.ServiceAgents</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

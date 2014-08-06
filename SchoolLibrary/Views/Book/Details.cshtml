@@ -1,0 +1,88 @@
+﻿@model SchoolLibrary.BusinessModels.Models.BookBusinessModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<h2>Details</h2>
+
+<fieldset>
+
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+    
+    <div class="display-label">
+        @Html.DisplayNameFor(model=>model.Authors)
+    </div>
+    <div class="display-field">
+    @foreach (var author in Model.Authors)
+    {
+        <div class="display-field">
+        @Html.DisplayFor(model =>author.FirstName) @Html.DisplayFor(model=>author.MiddleName) @Html.DisplayFor(model=>author.LastName) <br>
+            </div>
+    }
+        </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Publisher)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Publisher)
+    </div>
+    
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Year)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Year)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.PageCount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PageCount)
+    </div>
+    
+    <div class="display-label">
+        Inventory Number
+    </div>
+    <div class="display-field">
+        @Model.Inventories.Count(a=>a.IsAvailable)
+    </div>
+   <div class="display-label">
+        @Html.DisplayNameFor(model=>model.Tags)
+    </div>
+    <div class="display-field">
+    @foreach (var tag in Model.Tags)
+    {
+        <div class="display-field">
+        @Html.DisplayFor(model =>tag.name)
+            </div>
+    }
+        </div>
+</fieldset>
+@if (@User.IsInRole("Librarian"))
+    {
+        <div >
+    
+            @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) 
+            
+            
+            
+        </div>
+}
+@if (@User.IsInRole("Registred")) 
+    {
+        <div>
+           @Html.ActionLink("Reserve", "Reserve",new { id=Model.Id } )|
+           
+        </div>
+}
+@Html.ActionLink("Back to List", "Index")

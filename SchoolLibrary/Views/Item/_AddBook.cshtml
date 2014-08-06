@@ -1,0 +1,64 @@
+﻿@using SchoolLibrary.BusinessModels.Models
+@model SchoolLibrary.BusinessModels.MVCModels.BookWithAuthorsShort
+
+
+<form  data-bind="submit:save" id="BookForm">
+    @Html.ValidationSummary(true)
+    <fieldset>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model=>model.Name, new { data_bind="value: Name" })
+           @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Year)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Year,new { data_bind="value: Year" })
+            @Html.ValidationMessageFor(model => model.Year)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Publisher)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Publisher,new { data_bind="value: Publisher" })
+            @Html.ValidationMessageFor(model => model.Publisher)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PageCount)
+        </div>
+        <div class="editor-field">
+             @Html.TextBoxFor(model => model.PageCount,new { data_bind="value: PageCount" })
+            @Html.ValidationMessageFor(model => model.PageCount)
+        </div>
+        <div>
+            <h4>@Html.LabelFor(model => model.Authors)</h4>
+
+            <div class="editor-field">
+                <input id="combobox" type="text" />
+            </div>
+
+            @Html.Partial("_ManageTags")
+        </div>
+        <p>
+            <input class="btn btn-success" type="submit" value="Create" />
+        </p>
+    </fieldset>
+</form>
+<div id="jqxwindow">
+    <div>
+        <h2>Create Author</h2>
+    </div>
+    <div>
+        @using (Ajax.BeginForm("Create", "Author", FormMethod.Post, new AjaxOptions { OnSuccess = "successAdd" }))
+        {
+        @Html.Partial("~/Views/Author/CreatePartial.cshtml", new AuthorBusinessModel())
+        }
+    </div>
+</div>

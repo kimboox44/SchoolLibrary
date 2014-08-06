@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+  <metadata minClientVersion="1.0">
+    <id>MVC4.Paging</id>
+    <version>3.1.0</version>
+    <title>MVC 4 Paging</title>
+    <authors>Bhaumik Patel</authors>
+    <owners>Bhaumik Patel</owners>
+    <projectUrl>http://mvcpaging.apphb.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MVC 4 Paging with bootstrap or without bootstrap design also has different options like ItemTexts, TooltipTitles, Size, Alignment, IsShowControls, ItemIcon, metro css supported. 
+Demo http://mvcpaging.apphb.com/
+Now mvc paging areas supported.</description>
+    <summary>MVC 4 Paging bootstrap with ajax or without ajax and with form filter, areas supported.</summary>
+    <releaseNotes>3.1.0
+- Custom css class added
+
+3.0.0
+- MVC Areas Supported
+- Glyphicons icon &lt;i class="icon-chevron-right"&gt;&lt;/i&gt; added
+- Custom css themes added (light, dark, compact, green-round, metro)
+
+2.0.0
+- Add first and last button
+- Add more option like IsShowFirstLast, IsShowPages
+- Modify tooltip custom page number location
+- Add page summary like Showing 1 to 10 of 200 entries</releaseNotes>
+    <tags>MVC4 paging bootstrap</tags>
+  </metadata>
+</package>

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SchoolLibrary.Services.UnregisteredUserManagment.UnregisteredUserService" CodeBehind="UnregisteredUserService.svc.cs" %>

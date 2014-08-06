@@ -1,0 +1,9 @@
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.ServiceAgents\bin\Debug\SchoolLibrary.ServiceAgents.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.ServiceAgents\bin\Debug\SchoolLibrary.ServiceAgents.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.ServiceAgents\obj\Debug\SchoolLibrary.ServiceAgents.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.ServiceAgents\obj\Debug\SchoolLibrary.ServiceAgents.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.ServiceAgents\bin\Debug\SchoolLibrary.ServiceAgents.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.ServiceAgents\bin\Debug\SchoolLibrary.ServiceAgents.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.ServiceAgents\obj\Debug\SchoolLibrary.ServiceAgents.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.ServiceAgents\obj\Debug\SchoolLibrary.ServiceAgents.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.ServiceAgents\obj\Debug\SchoolLibrary.ServiceAgents.csprojResolveAssemblyReference.cache

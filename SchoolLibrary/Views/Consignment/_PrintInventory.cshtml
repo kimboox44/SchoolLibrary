@@ -1,0 +1,25 @@
+﻿<div id="jqxwindowprintinv" style="display: none">
+    <div>
+
+        <h2>Print</h2>
+
+    </div>
+    <div>
+        <object data="" id="objpdf" type="application/pdf" height="320" width="380"></object>
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    function print(number) {
+
+        
+        $("#jqxwindowprintinv").jqxWindow("open");
+        document.getElementById('objpdf').data = '/api/barcodeapi/getbarcodeinventory?number=' + number;
+
+    }
+    function initPrint() {
+        $("#jqxwindowprintinv").jqxWindow({ height: 400, width: 400, isModal: true, autoOpen: false });
+    }
+</script>

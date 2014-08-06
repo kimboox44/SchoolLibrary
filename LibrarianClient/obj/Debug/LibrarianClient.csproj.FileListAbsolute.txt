@@ -1,0 +1,13 @@
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\LibrarianClient\bin\Debug\LibrarianClient.exe.config
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\LibrarianClient\bin\Debug\LibrarianClient.exe
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\LibrarianClient\bin\Debug\LibrarianClient.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\LibrarianClient\obj\Debug\LibrarianClient.csprojResolveAssemblyReference.cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\LibrarianClient\obj\Debug\MainWindow.baml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\LibrarianClient\obj\Debug\MainWindow.g.cs
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\LibrarianClient\obj\Debug\App.g.cs
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\LibrarianClient\obj\Debug\LibrarianClient_MarkupCompile.cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\LibrarianClient\obj\Debug\LibrarianClient.g.resources
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\LibrarianClient\obj\Debug\LibrarianClient.Properties.Resources.resources
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\LibrarianClient\obj\Debug\LibrarianClient.csproj.GenerateResource.Cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\LibrarianClient\obj\Debug\LibrarianClient.exe
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\LibrarianClient\obj\Debug\LibrarianClient.pdb

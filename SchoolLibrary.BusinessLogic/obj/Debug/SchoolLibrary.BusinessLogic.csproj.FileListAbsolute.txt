@@ -1,0 +1,49 @@
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.BusinessLogic.dll.config
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.BusinessLogic.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.BusinessLogic.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\EntityFramework.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\LinqToExcel.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\log4net.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\Remotion.Data.Linq.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\Remotion.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\Remotion.Interfaces.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.BusinessModels.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.DataAccess.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.ServiceAgents.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\WebMatrix.Data.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\WebMatrix.WebData.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.BusinessModels.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.DataAccess.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.ServiceAgents.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\EntityFramework.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\LinqToExcel.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\WebMatrix.Data.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\WebMatrix.WebData.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\obj\Debug\SchoolLibrary.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\obj\Debug\SchoolLibrary.BusinessLogic.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessLogic\obj\Debug\SchoolLibrary.BusinessLogic.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.BusinessLogic.dll.config
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.BusinessLogic.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.BusinessLogic.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\EntityFramework.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\LinqToExcel.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\log4net.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\Remotion.Data.Linq.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\Remotion.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\Remotion.Interfaces.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.BusinessModels.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.DataAccess.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.ServiceAgents.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\WebMatrix.Data.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\WebMatrix.WebData.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.BusinessModels.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.DataAccess.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\SchoolLibrary.ServiceAgents.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\EntityFramework.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\LinqToExcel.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\WebMatrix.Data.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\WebMatrix.WebData.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\obj\Debug\SchoolLibrary.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\obj\Debug\SchoolLibrary.BusinessLogic.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\obj\Debug\SchoolLibrary.BusinessLogic.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessLogic\bin\Debug\itextsharp.dll

@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Unconfirmed users";
+}
+
+<h2>Unconfirmed users</h2>
+
+@Html.ActionLink("Return to Admin page", "IndexWidgets")
+
+@Html.ActionLink("Show page without widgets","ShowUnconfirmedUsers")
+
+@section scripts {
+    <link rel="stylesheet" href="../../Scripts/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jqWidgets/jqx-all.js"></script>
+    <script src="~/Scripts/knockout-3.0.0.debug.js"></script>
+    <script src="~/Scripts/knockout-3.0.0.js"></script>
+    <script src="~/Scripts/json2.js"></script>
+    <script src="~/Scripts/json2.min.js"></script>
+    <script src="~/Scripts/jqWidgets/jqxknockout.js"></script>
+    <script type="text/javascript" src="../../scripts/gettheme.js"></script>
+    <script src="~/Scripts/UnconfirmedUsersKnockoutGrid.js"></script>
+}
+
+<div id='jqxWidget'>
+    <div data-bind="grid: {disabled: disabled}" id="grid">
+    </div>
+</div>
+<div id="eventWindow">
+    <div>
+        User confirmation</div>
+    <div>
+        <div>
+            Are you sure to confirm this user and bind him with reader?
+        </div>
+        <div>
+            <div style="float: right; margin-top: 15px;">
+                <input type="button" id="ok" value="OK" style="margin-right: 10px" />
+                <input type="button" id="cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</div>

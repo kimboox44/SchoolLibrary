@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<p> Hello, librarian!</p>
+
+@section scripts
+{
+    <script type="text/javascript">
+        function recalculateScores() {
+            $.ajax({
+                type: "POST",
+                url: "/api/tagsapi/RecalculateAllTagScores",
+                traditional: true,
+                success: function() {
+                    console.log("recalculated");
+                }
+            });
+        }
+    </script>
+}

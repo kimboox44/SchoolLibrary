@@ -1,0 +1,163 @@
+﻿@model SchoolLibrary.BusinessModels.Models.ReaderBusinessModel
+
+@{
+    ViewBag.Title = "Reader Creation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts {
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script type ="text/javascript" src="@Url.Content("~/Scripts/jquery-2.0.3.min.js")"></script>
+<script type="text/javascript" src="https://flexicontent.googlecode.com/svn-history/r1574/trunk/com_flexicontent_v2.x/site/librairies/jquery/js/jquery-ui-1.9.2.min.js"></script>
+    <script type ="text/javascript" src="@Url.Content("~/Scripts/jquery.fileupload.js")"></script>
+    <script type ="text/javascript" src="@Url.Content("~/Scripts/jquery.fileupload-ui.js")"></script>
+    <script type ="text/javascript" src="@Url.Content("~/Scripts/jquery.iframe-transport.js")"></script>
+
+    <script type="text/javascript">
+        var jqXHRData;
+
+        $(document).ready(function() {
+            initSimpleFileUpload();
+            $("#hl-start-upload").on('click', function() {
+                if (jqXHRData) {
+                    jqXHRData.submit();
+                }
+                return false;
+            });
+            $(".date").datepicker({ changeYear: true, yearRange: "1993:2013" });
+
+        });
+
+        function initSimpleFileUpload() {
+            'use strict';
+            $('#fu-my-simple-upload').fileupload({
+                url: '/api/readerapi/addreadersfromfile',
+                dataType: 'json',
+                replaceFileInput: false,
+                add: function(e, data) {
+                    jqXHRData = data;
+                    $(this).html(data.files[0].name);
+                },
+                done: function(event, data) {
+                    if (data.result.isUploaded) {
+                        $("#dialog").dialog({
+                            modal: true,
+                                buttons: {
+                                    Ok: function() {
+                                        $(this).dialog("close");
+                                    }
+                                },
+                                beforeClose: function() { window.location.href = "/Librarian/Readers" }
+                            }
+                        );
+                        $("#tabs-1").html("<pre>" + data.result.added + "</pre>");
+                        $("#tabs-2").html("<pre>" + data.result.errors + "</pre>");
+                        $("#tabs").tabs();
+                    } else {
+                        $("#dialog").html(data.result.errors);
+                        $("#dialog").dialog({
+                            modal: true,
+                            buttons: {
+                                Ok: function () {
+                                    $(this).dialog("close");
+                                }
+                            }
+                        }
+                        );
+                    }
+                },
+            });
+        }
+
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<body>
+    <div align="left" style=" float:left; border-right: 2px solid black; width: 350px;">
+        <h2>Create Reader</h2>
+        @using (Html.BeginForm()) {
+            @Html.ValidationSummary(true)
+
+            <fieldset>
+               
+
+                <div class="editor-label">
+                    <h4>First name</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.ValidationMessageFor(model => model.FirstName)
+                    @Html.EditorFor(model => model.FirstName)
+                </div>
+
+                <div class="editor-label">
+                    <h4>Last name</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.ValidationMessageFor(model => model.LastName)
+                    @Html.EditorFor(model => model.LastName)
+                </div>
+
+                <div class="editor-label">
+                   <h4>Address</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.ValidationMessageFor(model => model.Address)
+                    @Html.EditorFor(model => model.Address)
+                </div>
+
+                <div class="editor-label">
+                    <h4>Birthday</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.ValidationMessageFor(model => model.Birthday)
+                    @Html.TextBoxFor(model => model.Birthday,  new{ @class = "date" })
+                </div>
+
+                <div class="editor-label">
+                    <h4>Phone</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.ValidationMessageFor(model => model.Phone)
+                    @Html.EditorFor(model => model.Phone)
+                </div>
+
+                <div class="editor-label">
+                    <h4>Email</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.ValidationMessageFor(model => model.EMail)
+                    @Html.EditorFor(model => model.EMail)
+                </div>
+
+                <p>
+                    <input type="submit" value="Create" />
+                </p>
+            </fieldset>
+        }
+    </div>
+
+    <div style="float: left; width: 450px; padding-left: 20px"  >
+        <h2>Add multiple readers from file</h2>
+        @Html.Partial("Partials/_FilePartial")
+    </div>
+    <div style="clear: both"></div>
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    <div id="dialog" title="Upload log">
+        <div id="tabs" >
+            <ul>
+                <li><a href="#tabs-1" >Added readers</a></li>
+                <li><a href="#tabs-2" >Errors</a></li>
+            </ul>
+            <div id="tabs-1">
+            </div>
+            <div id="tabs-2">
+            </div>
+        </div>
+    </div>
+</body>
+
+

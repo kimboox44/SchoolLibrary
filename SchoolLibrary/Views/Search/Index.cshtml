@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@section scripts
+{
+   <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-2.0.3.min.js")"></script>
+   <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")"></script>
+}
+
+<h2>SEARCH BOOKS</h2>
+
+@using (Ajax.BeginForm("Index", "Search",
+                            new AjaxOptions { UpdateTargetId = "grid-list", HttpMethod = "get", LoadingElementId = "loading", OnBegin = "beginPaging", OnSuccess = "successPaging", OnFailure = "failurePaging" },
+                            new { id = "frm-search" }))
+{
+    <div class="input-append2">
+        @*<input class="span2" id="appendedInputButton" type="text" name="bookName" placeholder="Name" />*@
+        <input class="myspan2" id="appendedInputButton" type="text" name="bookName" placeholder="Name" />
+        <button class="btn" type="submit"><i class="icon-search"></i>&nbsp;Search</button>
+    </div>
+    
+
+    <div id="grid-list">
+        @{ Html.RenderPartial("SearchBook", Model); }
+    </div>
+}
+<script type="text/javascript">
+
+    function beginPaging(args) {
+        // Animate
+        $('#grid-list').fadeOut('normal');
+    }
+
+    function successPaging() {
+        // Animate
+        $('#grid-list').fadeIn('normal');
+        $('a').tooltip();
+    }
+
+    function failurePaging() {
+        alert("Could not retrieve list.");
+    }
+
+</script>

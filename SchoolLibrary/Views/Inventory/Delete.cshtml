@@ -1,0 +1,53 @@
+﻿@model SchoolLibrary.BusinessModels.Models.InventoryBusinessModel
+
+@{
+    ViewBag.Title = "Delete inventory";
+}
+
+<h2>Delete inventory</h2>
+
+<h3>Are you sure you want to delete this inventory?</h3>
+<fieldset>
+    
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InventoryId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InventoryId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ItemId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ItemId)
+    </div>
+    
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Number)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Number)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsAvailable)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsAvailable)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WriteOffDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WriteOffDate)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index", new { id=Model.ItemId })
+    </p>
+}

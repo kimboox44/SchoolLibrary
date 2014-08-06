@@ -1,0 +1,146 @@
+﻿@model IEnumerable<SchoolLibrary.BusinessModels.MVCModels.DeptorsReadersModel>
+
+@{
+    ViewBag.Title = "DeptorsReaders";
+}
+
+<h2 text-align:"centr" >DeptorsReaders</h2>
+
+@section scripts{  
+
+        <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+        <script type="text/javascript" src="~/Scripts/jqWidgets/jqxcore.js"></script>
+        <link rel="stylesheet" type="text/css" href="~/Content/jqx.base.css" />
+    
+            <script type="text/javascript">
+
+        $(document).ready(function() {
+            // prepare the data
+            var source =
+            {
+                datatype: "json",
+                datafields: [
+                    { name: 'readerId', type: 'int' },
+                    { name: 'FirstName', type: 'string' },
+                    { name: 'LastName', type: 'string' },
+                    { name: 'Address', type: 'string' },
+                    { name: 'Phone', type: 'string' },
+                    { name: 'ItemName', type: 'string' },
+                    { name: 'StartDate', type: 'date' },
+                    { name: 'FinishDate', type: 'date' },
+                ],
+                url: '/api/DeptorsReadersApi/GetDeptorsReaders?minday=' + $('#minday').val() + '&maxday=' + $('#maxday').val() + '',
+
+                root: 'Rows',
+                sort: function() {
+                    $("#grid").jqxGrid('updatebounddata', 'sort');
+                },
+                filter: function() {
+                    $("#grid").jqxGrid('updatebounddata', 'filter');
+                },
+                beforeprocessing: function(data) {
+                    source.totalrecords = data.TotalRows;
+                }
+            };
+            var dataAdapter = new $.jqx.dataAdapter(source);
+
+            // initialize jqxGrid
+            $("#grid").jqxGrid(
+                {
+                    width: 1000,
+                    source: dataAdapter,
+                    showfilterrow: true,
+                    filterable: true,
+                    sortable: false,
+                    pageable: true,
+                    autoheight: true,
+                    virtualmode: true,
+                    rendergridrows: function(obj) {
+                        return obj.data;
+                    },
+                    columnsresize: true,
+                    columns: [
+                        {
+                            text: "First Name",
+                            datafield: "FirstName",
+                            filtertype: 'textbox',
+                            filtercondition: 'contains'
+                        },
+                        {
+                            text: "Last Name",
+                            datafield: "LastName",
+                            filtertype: 'textbox',
+                            filtercondition: 'contains'
+                        },
+                        {
+                            text: "Address",
+                            datafield: "Address",
+                            filtertype: 'textbox',
+                            filtercondition: 'contains',
+                            width: 140
+                        },
+                        {
+                            text: "Phone",
+                            datafield: "Phone",
+                            filtertype: 'textbox',
+                            filtercondition: 'contains',
+                            width: 140
+                        },
+                        {
+                            text: "Item Name",
+                            datafield: "ItemName",
+                            filtertype: 'textbox',
+                            filtercondition: 'contains',
+                            width: 150
+                        },
+                        {
+                            text: "Start Date",
+                            datafield: "StartDate",
+                            cellsformat: 'dd.MM.yyyy',
+                            filtertype: 'date',
+                            filtercondition: 'contains'
+                        },
+                        {
+                            text: "Finish Date",
+                            datafield: "FinishDate",
+                            cellsformat: 'dd.MM.yyyy',
+                            filtertype: 'date',
+                        },
+                        {
+                            text: 'Send Email',
+                            datafield: 'Send Email',
+                            columntype: 'button',
+                            filtertype: 'none',
+                            sortable: false,
+                            width: 150,
+                            cellsrenderer: function () {
+                                return "Send Email";
+                            },
+                            buttonclick: function (row) {
+                                var id = $("#grid").jqxGrid('getcellvalue', row, "readerId");
+                                window.location = '/Librarian/SendEmail?readerId=' + id;
+                            }
+                        }
+                    ]
+                });
+        });
+    </script>
+        
+    
+    }
+
+    <div id="grid"></div>
+
+@{
+    <br />
+    <p>Select the numbers of days owed: </p>
+    using (Html.BeginForm("DeptorsReaders", "Librarian", FormMethod.Get))
+    {
+        <p>Min days: @Html.TextBox("minday")</p>
+        <p>Max days: @Html.TextBox("maxday")</p>
+    
+    <input type="submit" value="Show debtors" />   
+    }
+}
+
+

@@ -1,0 +1,31 @@
+﻿@using SchoolLibrary.BusinessModels.Models
+@model IEnumerable<InventoryBusinessModel>
+
+@{
+    ViewBag.Title = "InventoriesWidgets";
+}
+
+<h2>Inventory list for @Model.FirstOrDefault().Item.Name</h2>
+
+<input type="hidden" id="consignmentId" value="@Model.FirstOrDefault().Consignment.Id" />
+    
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqWidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="~/Scripts/json2.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/jqx.base.css" />
+
+    <script type="text/javascript" src="~/Scripts/inventoryGridByConsignmentId.js"></script>
+
+    }
+<div id="grid"></div>
+<div id="jqxcheckbox"></div>
+<br />
+<div>
+    @Html.ActionLink("Back to " + Model.FirstOrDefault().Item.Name + " consignments list", "ItemWidgets", new { id =  @Model.FirstOrDefault().Item.Id}, null )
+</div>
+<div>
+    @Html.ActionLink("Back to all consignments list", "IndexWidgets")
+</div>
+@Html.Partial("_PrintInventory")

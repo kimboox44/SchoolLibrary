@@ -1,0 +1,80 @@
+﻿
+@using SchoolLibrary.BusinessModels.MVCModels
+@using SchoolLibrary.BusinessModels.Models
+
+@{
+    ViewBag.Title = "Add new book";
+}
+<link rel="stylesheet" href="~/Content/token-input-facebook.css" type="text/css" />
+<link rel="stylesheet" href="~/Content/jqx.base.css" type="text/css" />
+<h2>Add new item</h2>
+
+@Html.DropDownList("SelectedItem", new List<SelectListItem>
+{
+  new SelectListItem{ Text = "Book", Value = "0" },
+  new SelectListItem{ Text = "Disk", Value = "1" },
+  new SelectListItem{ Text = "Magazine", Value = "2"} 
+},new {id = "selectedItem", onchange = "onSelectionChanged()"})
+
+<div id="items">
+    @Html.Partial("_AddBook")
+    
+</div>
+
+    <div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<div id="addNewTagWindow">
+    
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxcombobox.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="~/Scripts/json2.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxpanel.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.tokeninput.js"></script>
+     <script type="text/javascript" src="~/Scripts/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/ManageAuthors.js"></script>
+    <script type="text/javascript" src="~/Scripts/ManageTags.js"></script>
+    <script type="text/javascript" src="~/ViewModels/BookViewModel.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script type="text/javascript" src="https://flexicontent.googlecode.com/svn-history/r1574/trunk/com_flexicontent_v2.x/site/librairies/jquery/js/jquery-ui-1.9.2.min.js"></script>
+<script type="text/javascript" src="~/Scripts/knockout.validation.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.8/jquery.validate.js" type="text/javascript"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.validate.unobtrusive.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="~/Scripts/moment.min.js"></script>
+    
+    <script type="text/javascript">
+        function onSelectionChanged() {
+            $("#items").load("@Url.Action("LoadPartial","Item")", { 'value': $("#selectedItem option:selected").text().toLowerCase() },
+                                            function (response, status, xhr) {
+                                                onReady();
+                                            });
+        };
+        var model = "";
+        
+        var tags = "";
+        $(document).ready(onReady());
+            
+        function onReady() {
+            
+            initAuthorsInput(model);
+            initTagsBox(tags);
+            ko.validation.init({ insertMessages: false });
+            var BookViewModel = new bookViewModel(model);
+            ko.applyBindings(BookViewModel);
+        }
+    </script>
+}

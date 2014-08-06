@@ -1,0 +1,53 @@
+﻿@model SchoolLibrary.BusinessModels.Models.MagazineBusinessModel
+
+
+@using (Html.BeginForm("AddMagazine","Item")) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Publisher)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Publisher)
+            @Html.ValidationMessageFor(model => model.Publisher)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Issue)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Issue)
+            @Html.ValidationMessageFor(model => model.Issue)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PageCount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PageCount)
+            @Html.ValidationMessageFor(model => model.PageCount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Year)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Year)
+            @Html.ValidationMessageFor(model => model.Year)
+        </div>
+        @Html.Partial("_ManageTags")
+
+        <p>
+            <input class="btn btn-success" type="submit" value="Create" />
+        </p>
+    </fieldset>
+}

@@ -1,0 +1,52 @@
+﻿<h2>Reservation Knockout</h2>
+
+@Html.ActionLink("Widget version |", "ViewReservedItemsWidgets")
+@Html.ActionLink(" HTML version", "ViewReservedItems")
+
+<div id="delete-one-confirm" title="Delete this reserved item?" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>This reserved item will be deleted. Are you sure?</p>
+</div>
+
+<div id="delete-multiple-confirm" title="Delete selected reserved items?" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>These reserved item will be deleted. Are you sure?</p>
+</div>
+
+<div id="dialog-modal" title="Information about item">
+    <p id="bookInfo"></p>
+</div>
+
+
+<div id='jqxWidget'>
+
+    <div data-bind="grid: {disabled: disabled}" id="grid">
+    </div>
+
+
+</div>
+
+
+
+@section scripts {
+    @Scripts.Render("~/bundles/toastr")
+
+    @Scripts.Render("~/bundles/reserveKnockout")
+
+    @Styles.Render("~/Content/toastr")
+    
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jqWidgets/jqx-all.js"></script>
+    <script src="~/Scripts/knockout-3.0.0.js"></script>
+    <script src="~/Scripts/json2.js"></script>
+    <script src="~/Scripts/jqWidgets/jqxknockout.js"></script>
+    <script type="text/javascript" src="../../scripts/gettheme.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/reserveItem/gridKnockout.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="~/Content/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="../../Scripts/jqwidgets/styles/jqx.base.css" type="text/css" />
+
+    
+
+}

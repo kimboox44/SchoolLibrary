@@ -1,0 +1,60 @@
+﻿@model IEnumerable<SchoolLibrary.BusinessModels.Models.ReaderBusinessModel>
+
+@{
+    ViewBag.Title = "Readers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Readers</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateReader")
+    @Html.ActionLink("Go to javascript version", "ReadersSinglePage")
+</p>
+
+@section scripts {
+    
+    }
+
+    <table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            First
+            Name
+        </th>
+        <th>
+            Last
+            Name
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMail)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMail)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditReader", "Librarian", new { id=item.ReaderId },null) |
+            @Html.ActionLink("Details", "ReaderDetails", "Librarian", new {  id=item.ReaderId  }, null) |
+            @Html.ActionLink("View history", "ReaderHistory", "Librarian", new { readerId = item.ReaderId }, null)
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f2860ffd-7010-4de9-8b13-b945abce6c00" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:64059/Services/ReaderManagment/ReaderManagment.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ReaderManagment.wsdl" MetadataType="Wsdl" ID="7bfa2e4b-b4bc-45e2-befc-1a6026778a2f" SourceId="1" SourceUrl="http://localhost:64059/Services/ReaderManagment/ReaderManagment.svc?wsdl" />
+    <MetadataFile FileName="ReaderManagment.xsd" MetadataType="Schema" ID="ee41812b-9439-4207-b841-a1c9cb55a75c" SourceId="1" SourceUrl="http://localhost:64059/Services/ReaderManagment/ReaderManagment.svc?xsd=xsd1" />
+    <MetadataFile FileName="ReaderManagment1.xsd" MetadataType="Schema" ID="e5ee2c04-71ff-4be7-baa7-036d12e12a44" SourceId="1" SourceUrl="http://localhost:64059/Services/ReaderManagment/ReaderManagment.svc?xsd=xsd2" />
+    <MetadataFile FileName="ReaderManagment2.xsd" MetadataType="Schema" ID="961207c6-1cd6-48b5-8c75-f0f738e2c18b" SourceId="1" SourceUrl="http://localhost:64059/Services/ReaderManagment/ReaderManagment.svc?xsd=xsd0" />
+    <MetadataFile FileName="ReaderManagment.disco" MetadataType="Disco" ID="8ec321c8-7fab-4808-aa14-f2a20f476a39" SourceId="1" SourceUrl="http://localhost:64059/Services/ReaderManagment/ReaderManagment.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

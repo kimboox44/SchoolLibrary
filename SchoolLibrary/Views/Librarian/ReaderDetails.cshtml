@@ -1,0 +1,54 @@
+﻿@model SchoolLibrary.BusinessModels.Models.ReaderBusinessModel
+@{
+    ViewBag.Title = "ReaderDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style media="screen" type="text/css">
+
+.div-table{
+  display:table;         
+  width:auto;         
+  border: 0;      
+  border-spacing:5px;
+}
+.div-table-row{
+  display:table-row;
+  width:auto;
+  clear:both;
+}
+.div-table-col{
+  float:left;
+  display:table-column;         
+  width:200px;         
+}
+
+
+</style>
+<h2>@Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h2>
+
+<fieldset>
+    
+    <div class="div-table">
+        <div class="div-table-row">
+            <div class="div-table-col">@Html.DisplayNameFor(model => model.Address)</div>
+            <div class="div-table-col">@Html.DisplayFor(model => model.Address)</div>
+        </div>
+        <div class="div-table-row">
+            <div class="div-table-col">@Html.DisplayNameFor(model => model.Birthday)</div>
+            <div class="div-table-col">@Html.DisplayFor(model => model.Birthday)</div>
+        </div>
+        <div class="div-table-row">
+            <div class="div-table-col">@Html.DisplayNameFor(model => model.Phone)</div>
+            <div class="div-table-col">@Html.DisplayFor(model => model.Phone)</div>
+        </div>
+        <div class="div-table-row">
+            <div class="div-table-col">@Html.DisplayNameFor(model => model.EMail)</div>
+            <div class="div-table-col">@Html.DisplayFor(model => model.EMail)</div>
+        </div>
+      </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "EditReader", new {  id=Model.ReaderId }) |
+    @Html.ActionLink("Back to List", "Readers")
+</p>

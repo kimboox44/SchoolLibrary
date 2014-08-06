@@ -1,0 +1,26 @@
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\SchoolLibrary.BusinessModels.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\SchoolLibrary.BusinessModels.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\LinqToExcel.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\log4net.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\Remotion.Data.Linq.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\Remotion.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\Remotion.Interfaces.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\System.Web.Razor.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\LinqToExcel.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\System.Web.Razor.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessModels\obj\Debug\SchoolLibrary.BusinessModels.csprojResolveAssemblyReference.cache
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessModels\obj\Debug\SchoolLibrary.BusinessModels.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.BusinessModels\obj\Debug\SchoolLibrary.BusinessModels.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\SchoolLibrary.BusinessModels.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\SchoolLibrary.BusinessModels.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\LinqToExcel.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\log4net.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\Remotion.Data.Linq.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\Remotion.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\Remotion.Interfaces.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\System.Web.Razor.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\LinqToExcel.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessModels\bin\Debug\System.Web.Razor.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessModels\obj\Debug\SchoolLibrary.BusinessModels.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessModels\obj\Debug\SchoolLibrary.BusinessModels.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.BusinessModels\obj\Debug\SchoolLibrary.BusinessModels.csprojResolveAssemblyReference.cache

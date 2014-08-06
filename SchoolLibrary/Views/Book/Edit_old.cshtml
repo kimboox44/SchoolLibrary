@@ -1,0 +1,91 @@
+﻿
+@model SchoolLibrary.BusinessModels.Models.BookBusinessModel
+
+
+@{
+    ViewBag.Title = "EditBookInfo";
+}
+
+<h2>EditBookInfo</h2>
+
+@using (Html.BeginForm("Edit_old","Book",FormMethod.Post)) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Year)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Year)
+            @Html.ValidationMessageFor(model => model.Year)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Publisher)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Publisher)
+            @Html.ValidationMessageFor(model => model.Publisher)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PageCount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PageCount)
+            @Html.ValidationMessageFor(model => model.PageCount)
+        </div>
+
+
+         <div>   
+            <h4>@Html.DisplayNameFor(model=>model.Authors)</h4>
+        <p>
+            @Html.ActionLink("Add to list", "AddAuthor", new { bookid=Model.Id})
+        </p>
+        
+            <table>
+           
+
+            @foreach (var item in Model.Authors) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit","Author", new { authorid=item.Id }) |
+                        @Html.ActionLink("Delete", "DeleteAuthor", new { bookid=Model.Id, authorid=item.Id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+        </div>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

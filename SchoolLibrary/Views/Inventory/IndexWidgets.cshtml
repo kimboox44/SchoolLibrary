@@ -1,0 +1,243 @@
+﻿@using SchoolLibrary.BusinessModels.Models
+@model IEnumerable<InventoryBusinessModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Inventory list for @(((BookBusinessModel)ViewBag.Book).Name)</h2>
+
+@Html.ActionLink("Go to non JS version", "Item", "Consignment")
+
+<p>
+    @using (Html.BeginForm("Add", "Inventory"))
+    {
+        <input type="submit" value="Add new consignment" />
+        <input id="count" name="count" type="text" value="Enter inventory count" />
+        @Html.Hidden("bookId", ((BookBusinessModel)ViewBag.Book).Id)
+        <span id="message"></span>
+    }
+</p>
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+    <script type="text/javascript" src="~/Scripts/addConsignmentValidate.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqWidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqWidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="~/Scripts/json2.js"></script>
+    <script type="text/javascript" src="~/Scripts/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/knockout.validation.js"></script>
+    <script type="text/javascript" src="https://flexicontent.googlecode.com/svn-history/r1574/trunk/com_flexicontent_v2.x/site/librairies/jquery/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.iframe-transport.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.fileupload.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.fileupload-ui.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/initfileuplaod.js")"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/jqx.base.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    @*<script type ="text/javascript" src="@Url.Content("~/Scripts/jquery-ui-1.9.2min.js")"></script>*@
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#jqxwindow1").jqxWindow({ width: 500, isModal: true, autoOpen: false });
+            $("#jqxwindow2").jqxWindow({ width: 500, isModal: true, autoOpen: false });
+            // prepare the data
+            var source =
+            {
+                datatype: 'json',
+                datafields: [
+                    { name: 'InventoryId', type: 'int' },
+                    { name: 'Number', type: 'string' },
+                    { name: 'IsAvailable', type: 'bool' },
+                    { name: 'WriteOffDate', type: 'datetime' }
+                ],
+                url: '/api/Inventoryapi/getbyid?id=@ViewBag.Book.Id',
+                sort: function () {
+                    $('#grid').jqxGrid('updatebounddata', 'sort');
+                },
+                root: 'Rows',
+                beforeprocessing: function (data) {
+                    source.rows = data.Rows;
+                    source.totalrecords = data.TotalRows;
+                }
+            };
+            var dataAdapter = new $.jqx.dataAdapter(source);
+
+
+            // initialize jqxGrid
+            $('#grid').jqxGrid(
+                {
+                    width: 800,
+                    source: dataAdapter,
+                    showfilterrow: true,
+                    filterable: true,
+                    sortable: true,
+                    pageable: true,
+                    autoheight: true,
+                    virtualmode: true,
+                    rendergridrows: function (obj) {
+                        return obj.data;
+                    },
+                    columnsresize: true,
+                    columns: [
+                        { text: 'Inventory Number', datafield: 'Number', filtertype: 'date', filtercondition: 'contains' },
+                        //{ text: 'ConsignmentId', datafield: 'ConsignmentId' },
+                        { text: 'IsAvailable', datafield: 'IsAvailable', columntype: 'checkbox' },
+                        { text: 'WriteOffDate', datafield: 'WriteOffDate' },
+                        {
+                            text: 'Details', datafield: 'Details', columntype: 'button', sortable: false, width: 100,
+                            cellsrenderer: function () {
+                                return 'Details';
+                            },
+                            buttonclick: function (row) {
+                                var id = $("#grid").jqxGrid('getcellvalue', row, 'InventoryId');
+                                getInventoryDetails(id);
+                                //window.location = '/Inventory/Details/?id=' + id;
+                            }
+                        },
+                        {
+                            text: 'Edit', datafield: 'Edit', columntype: 'button', sortable: false, width: 50,
+                            cellsrenderer: function () {
+                                return 'Edit';
+                            },
+                            buttonclick: function (row) {
+                                var id = $("#grid").jqxGrid('getcellvalue', row, 'InventoryId');
+                                window.location = '/Inventory/Edit/?id=' + id;
+                            }
+                        },
+                        {
+                            text: 'Delete', datafield: 'Delete', columntype: 'button', sortable: false, width: 100,
+                            cellsrenderer: function () {
+                                return 'Delete';
+                            },
+                            buttonclick: function (row) {
+                                var id = $('#grid').jqxGrid('getcellvalue', row, 'InventoryId');
+                                if (confirm('Do you want write off this item?')) {
+                                    writeOffDateInventory(id);
+                                }
+                            }
+                        }
+                    ]
+                });
+
+            $('#jqxcheckbox').bind('change', function (event) {
+                var checked = event.args.checked;
+                $('#log').html('checked: ' + checked);
+            });
+            $('#grid').bind('rowselect', function (event) {
+                var row = event.args.rowindex;
+                //$('#grid').viewGridRow(row, {
+                //    caption: "Inventory Details"
+                //});
+            });
+        });
+
+        var inventory;
+
+        ko.validation.init({ insertMessages: false });
+
+        function InventoryViewModel(data) {
+            this.InventoryId = ko.observable(data.InventoryId);
+            this.Number = ko.observable(data.Number);
+            this.IsAvailable = ko.observable(data.IsAvailable).extend({
+                required: true,
+            });
+            this.WriteOffDate = ko.observable(data.WriteOffDate);
+
+            //var self = this;
+            //self.save = function () {
+            //    $.ajax("/api/readerapi/update", {
+            //        data: ko.toJSON(this),
+            //        type: "put",
+            //        contentType: "application/json",
+            //        success: function () {
+            //            $('#grid').jqxGrid('updatebounddata');
+            //            $("#jqxwindow2").jqxWindow('close');
+            //        },
+            //        error: function () {
+            //            alert("failed");
+            //        }
+            //    });
+            //    return false;
+            //};
+        }
+
+
+        function getInventoryDetails(id) {
+            $.ajax({
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json",
+                url: "/api/Inventoryapi/getdetails/?id=" + id,
+                success: function (data) {
+                    inventory = new InventoryViewModel(data);
+                    //ko.cleanNode(document.getElementById("jqxwindow1"));
+                    ko.applyBindings(inventory, document.getElementById("jqxwindow1"));
+                    $("#jqxwindow1").jqxWindow('open');
+                }
+            });
+        }
+
+        function writeOffDateInventory(id) {
+            $.ajax({
+                type: "POST",
+                url: "/Inventory/Delete/",
+                traditional: true,
+                data: { id: id },
+                success: function () {
+                    $('#grid').jqxGrid('updatebounddata');
+                }
+            });
+        }
+
+
+        function getReaderEdit(id) {
+            $.ajax({
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json",
+                url: "/Inventory/Edit/?id=" + id,
+                success: function (data) {
+                    inventory = new InventoryViewModel(data);
+                    // ko.cleanNode(document.getElementById("jqxwindow2"));
+                    ko.applyBindings(inventory, document.getElementById("jqxwindow2"));
+                    $("#jqxwindow2").jqxWindow('open');
+                }
+            });
+        }
+
+    </script>
+}
+<div id="grid"></div>
+<div id="jqxcheckbox"></div>
+
+<div id="jqxwindow1">
+    <div>
+        <h2>Inventory Details</h2>
+    </div>
+    <div>
+        <p>Inventory Id: <strong data-bind="text: InventoryId"></strong></p>
+        <p>Inventory Number: <strong data-bind="text: Number"></strong></p>
+        <p>Is Available: <strong data-bind="checked: IsAvailable"></strong></p>
+        <p>Write off date: <strong data-bind="text: WriteOffDate"></strong></p>
+    </div>
+</div>
+
+<div id="jqxwindow2">
+    <div>
+        <h2>Edit Inventory Details</h2>
+    </div>
+    <div>
+        <p>Is Available:
+            <input data-bind="value: IsAvailable" /></p>
+        <p>Write Off Date:
+            <input data-bind="checked: WriteOffDate" /></p>
+        <p data-bind="validationMessage: WriteOffDate"></p>
+        <button data-bind="click: save">Save</button>
+    </div>
+</div>
+
+@*WCF binding
+  SharedSizeGroup
+*@

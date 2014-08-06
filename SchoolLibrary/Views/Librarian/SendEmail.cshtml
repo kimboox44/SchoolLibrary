@@ -1,0 +1,90 @@
+﻿@model SchoolLibrary.BusinessModels.MVCModels.EmailMassageModel
+
+@{
+    ViewBag.Title = "SendEmail";
+}
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>SendEmail</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirsName)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.FirsName,new { @readonly="readonly" })
+            @Html.ValidationMessageFor(model => model.FirsName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.LastName,new { @readonly="readonly" })
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Email,new { @readonly="readonly" })
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Subject)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Subject)
+            @Html.ValidationMessageFor(model => model.Subject)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Message)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Message, new { rows = 8, columns = 40 })
+            @Html.ValidationMessageFor(model => model.Message)
+        </div>
+
+        <p>
+            <input type="submit" value="Send" onclick ="return messageResult();" />
+                <script type="text/javascript">
+                    function messageResult() {
+                        toastr.options = {
+                            "closeButton": true,
+                            "debug": false,
+                            "positionClass": "toast-bottom-right",
+                            "onclick": null,
+                            "showDuration": "3000",
+                            "hideDuration": "10000",
+                            "timeOut": "10000",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
+                        }
+                        toastr.success('Message send successfully!');
+                    }
+                </script>
+            @*$('#Submit').click(function(e) {*@
+            });
+        </p>
+    </fieldset>
+}
+    <p id="bookInfo"></p>
+
+<div>
+    @Html.ActionLink("All Debtors readers", "DeptorsReaders")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/toastr")
+    @Styles.Render("~/Content/toastr")
+}

@@ -1,0 +1,34 @@
+﻿<div id="jqxwindowedit">
+    <div>
+        <h2>EDIT ORDER DETAILS</h2>
+    </div>
+    <div>
+        <form id ="form1">
+        <p>First Name: <input data-bind="value: OrderText"
+                                      data-val="true"                          
+                                      data-val-required="This field is required" 
+                                      data-val-regex="Incorrect first name" 
+                                      @*data-val-regex-pattern="[A-Za-zА-Яа-я]{2,}"*@
+                                      id="OrderText" name="OrderText"
+                                      class="text-box single-line" /></p>
+             <span class="field-validation-valid" data-valmsg-for="OrderText" data-valmsg-replace="true"></span>
+
+             <span class="field-validation-valid" data-valmsg-for="Message" data-valmsg-replace="true"></span>
+
+             <p>IsReady: <input type="checkbox" data-bind="checked:IsReady" data-val="true" id="IsReady" name="IsReady" /></p>
+
+             <p>IsLocked: <input type="checkbox" data-bind="checked:IsLocked" data-val="true" id="IsLocked" name="IsLocked" /></p>
+                
+             <p>Message: <input data-bind="value: Message"
+                                      data-val="true"
+                                      data-val-required="This field is required"
+                                      data-val-regex="Incorrect Message"
+                                      @*data-val-regex-pattern="[A-Za-zА-Яа-я]{2,}"*@
+                                      id="Message" name="Message"
+                                      class="text-box single-line" /></p>
+              <span class="field-validation-valid" data-valmsg-for="Message" data-valmsg-replace="true"></span>   
+
+            <button  data-bind="click: save">Save</button>
+        </form>
+    </div>
+</div>

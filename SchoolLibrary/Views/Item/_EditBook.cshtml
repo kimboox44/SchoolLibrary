@@ -1,0 +1,125 @@
+﻿@using SchoolLibrary.BusinessModels.Models
+@using SchoolLibrary.DataAccess.Entities
+@model SchoolLibrary.BusinessModels.MVCModels.BookWithAuthorsShort
+
+
+@{
+    ViewBag.Title = "Edit book information";
+}
+
+<link rel="stylesheet" href="~/Content/token-input-facebook.css" type="text/css" />
+<link rel="stylesheet" href="~/Content/jqx.base.css" type="text/css" />
+
+<h2>Edit information about book</h2>
+
+<form  data-bind="submit:save" id="BookForm">
+    @Html.ValidationSummary(true)
+
+
+
+    <div class="control-label">
+        @Html.LabelFor(model => model.Name)
+    </div>
+    <div class="controls">
+        @Html.TextBoxFor(model=>model.Name, new { data_bind="value: Name" })
+        @Html.ValidationMessageFor(model => model.Name)
+
+    </div>
+
+    <div class="control-label">
+        @Html.LabelFor(model => model.Year)
+    </div>
+    <div class="controls">
+       @Html.TextBoxFor(model => model.Year,new { data_bind="value: Year" })
+        @Html.ValidationMessageFor(model => model.Year)
+
+    </div>
+
+    <div class="control-label">
+        @Html.LabelFor(model => model.Publisher)
+    </div>
+    <div class="controls">
+        @Html.TextBoxFor(model => model.Publisher,new { data_bind="value: Publisher" })
+        @Html.ValidationMessageFor(model => model.Publisher)
+    </div>
+
+    <div class="control-label">
+        @Html.LabelFor(model => model.PageCount)
+    </div>
+    <div class="controls">
+        @Html.TextBoxFor(model => model.PageCount,new { data_bind="value: PageCount" })
+        @Html.ValidationMessageFor(model => model.PageCount)
+    </div>
+
+    <div class="control-group">
+        <div class="control-label">@Html.LabelFor(model => model.Authors)</div>
+
+        <div>
+            <input id="combobox" type="text" />
+        </div>
+    </div>
+        
+    @Html.Partial("_ManageTags")
+
+    <div class="control-group">
+        <input type="submit" value="Save" class="btn btn-success"/>
+            
+    </div>
+</form>
+
+
+
+<div id="jqxwindow">
+    <div>
+        <h2>Create Author</h2>
+    </div>
+    <div>
+        @using (Ajax.BeginForm("Create", "Author", FormMethod.Post, new AjaxOptions { OnSuccess = "successAdd()" }))
+        {
+            @Html.Partial("~/Views/Author/CreatePartial.cshtml", new AuthorBusinessModel())
+        }
+
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Back to List", "IndexWithWidgets")
+</div>
+
+<div id="addNewTagWindow"></div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/json2.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.tokeninput.js"></script>
+    <script type="text/javascript" src="~/Scripts/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/ManageAuthors.js"></script>
+    <script type="text/javascript" src="~/Scripts/ManageTags.js"></script>
+    <script type="text/javascript" src="~/ViewModels/BookViewModel.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script type="text/javascript" src="https://flexicontent.googlecode.com/svn-history/r1574/trunk/com_flexicontent_v2.x/site/librairies/jquery/js/jquery-ui-1.9.2.min.js"></script>
+<script type="text/javascript" src="~/Scripts/knockout.validation.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.8/jquery.validate.js" type="text/javascript"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.validate.unobtrusive.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="~/Scripts/moment.min.js"></script>
+    
+
+    <script type="text/javascript">
+        var model = @Html.Raw(Json.Encode(Model));
+        var tags = @Html.Raw(Json.Encode(Model.Tags));
+       
+        $(document).ready(function() { 
+       
+            initAuthorsInput(model);
+            initTagsBox(tags);
+            ko.validation.init({ insertMessages: false });
+            var BookViewModel = new bookViewModel(model);
+            ko.applyBindings(BookViewModel);
+        });
+    </script>
+}

@@ -1,0 +1,19 @@
+﻿@model SchoolLibrary.BusinessModels.Models.ReaderBusinessModel
+@{
+    ViewBag.Title = "DeleteReader";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete reader: @Model.FirstName @Model.LastName?</h3>
+<fieldset>
+    
+
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Readers")
+    </p>
+}

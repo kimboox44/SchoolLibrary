@@ -1,0 +1,179 @@
+﻿@using SchoolLibrary.BusinessModels.Models
+@model IEnumerable<SchoolLibrary.BusinessModels.Models.ReaderBusinessModel>
+
+@{
+    ViewBag.Title = "Readers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Readers</h2>
+
+<p>
+    <input type="button" onclick="showCreateWindow()" value="Create new">
+    <input type="button" onclick="showCreateMultipleWindow()" value="Create multiple">
+    @Html.ActionLink("Go to non JS version", "Readers")
+</p>
+
+@section scripts {    
+        
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    
+    <link rel="stylesheet" type="text/css" href="~/Content/jqx.base.css" />    
+
+    <script type="text/javascript" src="../../scripts/json2.js"></script> 
+
+    <script type="text/javascript" src="../../scripts/knockout-3.0.0.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.3.js"></script>
+
+    @*<script type ="text/javascript" src="@Url.Content("~/Scripts/jquery-ui-1.9.2min.js")"></script>*@
+    
+    <script type="text/javascript" src="https://flexicontent.googlecode.com/svn-history/r1574/trunk/com_flexicontent_v2.x/site/librairies/jquery/js/jquery-ui-1.9.2.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-migrate-1.1.0.min.js"></script>
+    <script type ="text/javascript" src="@Url.Content("~/Scripts/jquery.iframe-transport.js")"></script>
+
+    <script type ="text/javascript" src="@Url.Content("~/Scripts/jquery.fileupload.js")"></script>
+    
+    <script type ="text/javascript" src="@Url.Content("~/Scripts/jquery.fileupload-ui.js")"></script>
+
+    <script type ="text/javascript" src="@Url.Content("~/Scripts/initfileuplaod.js")"></script> 
+
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>  
+    
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.8/jquery.validate.js" type="text/javascript"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.validate.unobtrusive.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="~/Scripts/knockout.validation.js"></script>
+    <script type="text/javascript" src="~/Scripts/moment.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/initReaderSinglePage.js"></script>
+    <script type="text/javascript" src="~/ViewModels/ReaderViewModel.js"></script>
+    
+    <script type="text/javascript">
+        function recalculateScores() {
+            $.ajax({
+                type: "POST",
+                url: "/api/tagsapi/RecalculateAllTagScores",
+                traditional: true,
+                success: function () {
+                    console.log("recalculated");
+                }
+            });
+        }
+    </script>
+}
+    
+
+    <div id="grid"></div>
+
+    <div id="jqxwindow1" style="display: none">
+        <div>
+            <h2>Create Reader</h2>
+        </div>
+        <div>
+           <form id="form2" >
+                @Html.Partial("Partials/_CreateReaderPartial", new ReaderBusinessModel())
+            </form>
+        </div>
+    </div>
+    <div id="jqxwindow2" style="display: none">
+    <div>
+        <h2>Create multiple readers</h2>
+    </div>
+    <div>
+        @Html.Partial("Partials/_FilePartial")
+    </div>
+</div>
+    <div id="dialog" title="Upload log" style="display: none;">
+        <div id="tabs" >
+            <ul>
+                <li><a href="#tabs-1" >Added readers</a></li>
+                <li><a href="#tabs-2" >Errors</a></li>
+            </ul>
+            <div id="tabs-1">
+            </div>
+            <div id="tabs-2">
+            </div>
+        </div>
+    </div>
+    <div id="jqxwindow3" style="display: none">
+    <div>
+        <h2>Reader Details</h2>
+    </div>
+    <div>
+        <p>First Name: <strong data-bind="text: FirstName"></strong></p>
+        <p>Last Name: <strong data-bind="text: LastName"></strong></p>
+        <p>Address: <strong data-bind="text: Address"></strong></p>
+        <p>Birthday: <strong data-bind="text: Birthday"></strong></p>
+        <p>EMail: <strong data-bind="text: EMail"></strong></p>
+        <p>Phone: <strong data-bind="text: Phone"></strong></p>
+    </div>
+</div>
+
+    <div id="jqxwindow4" style="display: none">
+    <div>
+        <h2>Edit Reader Details</h2>
+    </div>
+    <div>
+        <form id="form1">
+            <p>
+                First Name: <input data-bind="value: FirstName"
+                                   data-val="true"
+                                   data-val-required="This field is required"
+                                   data-val-regex="Incorrect first name"
+                                   data-val-regex-pattern="[A-Za-zА-Яа-я]{2,}"
+                                   id="FirstName" name="FirstName"
+                                   class="text-box single-line" />
+            </p>
+            <span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+            <p>
+                Last Name: <input data-bind="value: LastName"
+                                  data-val="true"
+                                  data-val-required="This field is required"
+                                  data-val-regex="Incorrect last name"
+                                  data-val-regex-pattern="[A-Za-zА-Яа-я]{2,}"
+                                  id="LastName" name="LastName"
+                                  class="text-box single-line" />
+            </p>
+            <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+            <p>
+                Address: <input data-bind="value: Address"
+                                data-val="true"
+                                data-val-required="This field is required"
+                                id="Address" name="Address"
+                                class="text-box single-line" />
+            </p>
+            <span class="field-validation-valid" data-valmsg-for="Address" data-valmsg-replace="true"></span>
+            <p>
+                Birthday: <input data-bind="value: Birthday"
+                                 data-val="true"
+                                 data-val-required="This field is required"
+                                 data-val-date="This field must be date"
+                                 id="Birthday" name="Birthday"
+                                 class="text-box single-line" />
+            </p>
+            <span class="field-validation-valid" data-valmsg-for="Address" data-valmsg-replace="true"></span>
+            <p>
+                Email: <input data-bind="value: EMail"
+                              data-val="true"
+                              data-val-required="This field is required"
+                              data-val-email="Incorrect email"
+                              id="EMail" name="EMail"
+                              class="text-box single-line" />
+            </p>
+            <span class="field-validation-valid" data-valmsg-for="EMail" data-valmsg-replace="true"></span>
+            <p>
+                Phone: <input data-bind="value: Phone"
+                              data-val="true"
+                              data-val-required="This field is required"
+                              data-val-regex="Incorrect phone number"
+                              data-val-regex-pattern="^[+38-]?[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                              id="Phone" name="Phone"
+                              class="text-box single-line" />
+            </p>
+            <span class="field-validation-valid" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
+            <button data-bind="click: save">Save</button>
+        </form>
+
+    </div>
+</div>

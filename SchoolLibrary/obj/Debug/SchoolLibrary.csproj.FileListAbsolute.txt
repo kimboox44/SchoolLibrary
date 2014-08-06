@@ -1,0 +1,231 @@
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.dll.config
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Antlr3.Runtime.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.AspNet.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.Core.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.Core.UI.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.InfoCard.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.InfoCard.UI.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.Common.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.ServiceProvider.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.AuthorizationServer.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.Client.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.Client.UI.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.ClientAuthorization.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.ResourceServer.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.Provider.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.Provider.UI.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.RelyingParty.UI.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.UI.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenIdInfoCard.UI.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenIdOAuth.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\EntityFramework.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\LinqToExcel.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\log4net.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Microsoft.Practices.ServiceLocation.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Microsoft.Web.Infrastructure.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Moq.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\MvcPaging.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Newtonsoft.Json.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Ploeh.AutoFixture.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Remotion.Data.Linq.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Remotion.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Remotion.Interfaces.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.BusinessLogic.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.BusinessModels.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.DataAccess.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\StructureMap.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Net.Http.Formatting.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.Helpers.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.Http.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.Http.WebHost.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.Mvc.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.Optimization.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.Razor.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.WebPages.Deployment.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.WebPages.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.WebPages.Razor.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\WebActivator.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\WebGrease.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\WebMatrix.Data.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\WebMatrix.WebData.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.ServiceAgents.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Org.Mentalis.Security.Cryptography.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Mono.Math.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.BusinessModels.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.BusinessLogic.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.DataAccess.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.AspNet.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.Core.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.Core.UI.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.InfoCard.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.InfoCard.UI.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.Common.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.ServiceProvider.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.AuthorizationServer.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.Client.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.Client.UI.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.ClientAuthorization.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.ResourceServer.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.Provider.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.Provider.UI.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.RelyingParty.UI.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.UI.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenIdInfoCard.UI.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenIdOAuth.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\LinqToExcel.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Microsoft.Practices.ServiceLocation.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Moq.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\MvcPaging.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Newtonsoft.Json.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Ploeh.AutoFixture.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\StructureMap.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\StructureMap.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\EntityFramework.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Net.Http.Formatting.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.Helpers.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.Http.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.Http.WebHost.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.Mvc.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.Razor.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.WebPages.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.WebPages.Deployment.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\System.Web.WebPages.Razor.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\WebMatrix.Data.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\WebMatrix.WebData.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.ServiceAgents.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Org.Mentalis.Security.Cryptography.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\bin\Mono.Math.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\obj\Debug\SchoolLibrary.csprojResolveAssemblyReference.cache
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\obj\Debug\SchoolLibrary.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary\obj\Debug\SchoolLibrary.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.dll.config
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Antlr3.Runtime.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.Core.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.Core.UI.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.InfoCard.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.InfoCard.UI.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.Common.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.ServiceProvider.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.AuthorizationServer.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.Client.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.Client.UI.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.ClientAuthorization.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.ResourceServer.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.Provider.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.Provider.UI.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.RelyingParty.UI.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.UI.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenIdInfoCard.UI.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenIdOAuth.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\EntityFramework.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\LinqToExcel.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\log4net.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Moq.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\MvcPaging.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Newtonsoft.Json.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Ploeh.AutoFixture.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Remotion.Data.Linq.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Remotion.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Remotion.Interfaces.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.BusinessLogic.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.BusinessModels.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.DataAccess.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\StructureMap.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Net.Http.Formatting.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.Helpers.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.Http.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.Http.WebHost.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.Mvc.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.Optimization.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.Razor.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.WebPages.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.WebPages.Razor.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\WebActivator.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\WebGrease.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\WebMatrix.Data.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\WebMatrix.WebData.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.ServiceAgents.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Mono.Math.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.BusinessModels.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.BusinessLogic.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.DataAccess.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.Core.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.Core.UI.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.InfoCard.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.InfoCard.UI.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.Common.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth.ServiceProvider.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.AuthorizationServer.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.Client.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.Client.UI.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.ClientAuthorization.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OAuth2.ResourceServer.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.Provider.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.Provider.UI.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.RelyingParty.UI.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenId.UI.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenIdInfoCard.UI.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\DotNetOpenAuth.OpenIdOAuth.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\LinqToExcel.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Moq.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\MvcPaging.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Newtonsoft.Json.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Ploeh.AutoFixture.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\StructureMap.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\StructureMap.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\EntityFramework.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Net.Http.Formatting.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.Helpers.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.Http.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.Http.WebHost.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.Mvc.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.Razor.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.WebPages.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\System.Web.WebPages.Razor.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\WebMatrix.Data.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\WebMatrix.WebData.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\SchoolLibrary.ServiceAgents.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\Mono.Math.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\obj\Debug\SchoolLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\obj\Debug\SchoolLibrary.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\obj\Debug\SchoolLibrary.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary\bin\itextsharp.dll

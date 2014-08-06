@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13DE2E64-A501-4B72-9FD0-A660575B1E24}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SchoolLibrary.Tests</RootNamespace>
+    <AssemblyName>SchoolLibrary.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>True</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' Or '$(VisualStudioVersion)' == '11.0'">
+      <ItemGroup>
+        <Reference Include="UIAutomationTypes" />
+      </ItemGroup>
+    </When>
+  </Choose>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToExcel">
+      <HintPath>..\packages\LinqToExcel.1.7.1\lib\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\LinqToExcel.1.7.1\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.1.1309.1617\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Ploeh.AutoFixture, Version=3.16.1.0, Culture=neutral, PublicKeyToken=b24654c590009d4f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoFixture.3.16.1\lib\net40\Ploeh.AutoFixture.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion">
+      <HintPath>..\packages\LinqToExcel.1.7.1\lib\Remotion.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq">
+      <HintPath>..\packages\LinqToExcel.1.7.1\lib\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Interfaces">
+      <HintPath>..\packages\LinqToExcel.1.7.1\lib\Remotion.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="BusinessLogic\Mappers\ConsignmentMapperTests.cs" />
+    <Compile Include="BusinessLogic\Mappers\InventoryMapperTests.cs" />
+    <Compile Include="BusinessLogic\Mappers\ReaderMapperTest.cs" />
+    <Compile Include="BusinessLogic\Mappers\ReservedItemMapperTest.cs" />
+    <Compile Include="BusinessLogic\Mappers\AuthorMapperTests.cs" />
+    <Compile Include="BusinessLogic\Mappers\BookMapperTests.cs" />
+    <Compile Include="BusinessLogic\Mappers\ScannedPageMapperTests.cs" />
+    <Compile Include="BusinessLogic\Mappers\TagScoreMapperTests.cs" />
+    <Compile Include="BusinessLogic\Mappers\TagsMapperTests.cs" />
+    <Compile Include="Controllers\ApiControllers\DebtorsApiControllerTest.cs" />
+    <Compile Include="Controllers\ApiControllers\ReaderApiControllerTests.cs" />
+    <Compile Include="BusinessLogic\Mappers\ReaderHistoryMapperTest.cs" />
+    <Compile Include="BusinessLogic\Mappers\DebtorsReadersMapperTest.cs" />
+    <Compile Include="BusinessLogic\Mappers\MagazineMapperTest.cs" />
+    <Compile Include="BusinessLogic\Mappers\BookWithAuthorsShortMapperTests.cs" />
+    <Compile Include="Controllers\ApiControllers\PdfGeneratorTests.cs" />
+    <Compile Include="Controllers\ConsignmentControllerTests.cs" />
+    <Compile Include="Controllers\ItemControllerTests.cs" />
+    <Compile Include="Controllers\LibrarianControllerTest.cs" />
+    <Compile Include="Controllers\SearchItemControllerTest.cs" />
+    <Compile Include="DataAccess\Facades\ReservedItemFacadeTests.cs" />
+    <Compile Include="DataAccess\Facades\ConsignmentFacadeTests.cs" />
+    <Compile Include="DataAccess\Facades\InventoryFacadeTests.cs" />
+    <Compile Include="DataAccess\Facades\ScannedPageFacadeTest.cs" />
+    <Compile Include="DataAccess\Facades\SearchItemFacadeTest.cs" />
+    <Compile Include="DataAccess\Facades\TagsFacadeTests.cs" />
+    <Compile Include="DataAccess\Facades\ReadersFacadeTests.cs" />
+    <Compile Include="DataAccess\Facades\ReaderHistoryFacadeTests.cs" />
+    <Compile Include="Fakes\MemoryDbSet.cs" />
+    <Compile Include="Fakes\RepositoryFake.cs" />
+    <Compile Include="Fakes\Initializer.cs" />
+    <Compile Include="Controllers\ApiControllers\BarCodeApiControllerTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolLibrary.BusinessModels\SchoolLibrary.BusinessModels.csproj">
+      <Project>{6eb12b1e-950d-4cc5-8e3a-fdcd1bbfa571}</Project>
+      <Name>SchoolLibrary.BusinessModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SchoolLibrary.DataAccess\SchoolLibrary.DataAccess.csproj">
+      <Project>{EB30ECD1-FEE4-44BF-9115-EC28EE63F15D}</Project>
+      <Name>SchoolLibrary.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SchoolLibrary.BusinessLogic\SchoolLibrary.BusinessLogic.csproj">
+      <Project>{DF0F4965-5FBD-409B-AD6C-B9D27ADFAC5A}</Project>
+      <Name>SchoolLibrary.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SchoolLibrary\SchoolLibrary.csproj">
+      <Project>{773285de-29c3-4c1c-85fc-fc732da946a5}</Project>
+      <Name>SchoolLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

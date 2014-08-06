@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a12c3ec1-9362-4acb-89f2-bce9900d247b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:64059/Services/UnregisteredUserManagment/UnregisteredUserService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UnregisteredUserService1.xsd" MetadataType="Schema" ID="1a0e5cef-5e17-401f-92cb-9f91301e9630" SourceId="1" SourceUrl="http://localhost:64059/Services/UnregisteredUserManagment/UnregisteredUserService.svc?xsd=xsd1" />
+    <MetadataFile FileName="UnregisteredUserService.xsd" MetadataType="Schema" ID="be586a6c-f14d-4899-a620-700c000652a6" SourceId="1" SourceUrl="http://localhost:64059/Services/UnregisteredUserManagment/UnregisteredUserService.svc?xsd=xsd0" />
+    <MetadataFile FileName="UnregisteredUserService2.xsd" MetadataType="Schema" ID="0d884b94-ae6c-4c41-b154-b61ebb27e38d" SourceId="1" SourceUrl="http://localhost:64059/Services/UnregisteredUserManagment/UnregisteredUserService.svc?xsd=xsd3" />
+    <MetadataFile FileName="UnregisteredUserService.wsdl" MetadataType="Wsdl" ID="219f2886-4373-48c0-8d9f-715274a62cfe" SourceId="1" SourceUrl="http://localhost:64059/Services/UnregisteredUserManagment/UnregisteredUserService.svc?wsdl" />
+    <MetadataFile FileName="UnregisteredUserService3.xsd" MetadataType="Schema" ID="580df7a8-44ad-468a-8b14-426b012833ac" SourceId="1" SourceUrl="http://localhost:64059/Services/UnregisteredUserManagment/UnregisteredUserService.svc?xsd=xsd4" />
+    <MetadataFile FileName="UnregisteredUserService.disco" MetadataType="Disco" ID="c910bf7d-ca2a-41ec-b25c-0664dafdb964" SourceId="1" SourceUrl="http://localhost:64059/Services/UnregisteredUserManagment/UnregisteredUserService.svc?disco" />
+    <MetadataFile FileName="UnregisteredUserService11.xsd" MetadataType="Schema" ID="c81eb4e3-7191-4b67-a82a-3b3141165578" SourceId="1" SourceUrl="http://localhost:64059/Services/UnregisteredUserManagment/UnregisteredUserService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

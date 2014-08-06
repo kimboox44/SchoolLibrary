@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Users</h2>
+
+<p>
+    <a href="#" onclick="deleteSelectedUsers()">Delete selected users</a> | 
+    @Html.ActionLink("View unconfirmed users", "ShowUnconfirmedUsersWidget")
+</p>
+
+<div id="grid"></div>
+
+@Html.ActionLink("Navigate to old page", "Index")
+
+<div id="delete-one-confirm" title="Delete this user?" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>These user will be permanently deleted and cannot be recovered. Are you sure?</p>
+</div>
+
+<div id="delete-multiple-confirm" title="Delete selected users?" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>These users will be permanently deleted and cannot be recovered. Are you sure?</p>
+</div>
+
+<div id="reset-password-confirm" title="Reset users password?" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>User password wil be reset and user will be notified via e-mail. Are you shure?</p>
+</div>
+
+@section scripts
+{
+    <style>
+        .ui-dialog .ui-state-error {
+            padding: .3em;
+        }
+
+        .validateTips {
+            border: 1px solid transparent;
+            padding: 0.3em;
+        }
+    </style>
+    
+    <link rel="stylesheet" type="text/css" href="~/Content/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+    <script type="text/javascript" src="~/Scripts/admin/indexWidgets.js"></script>
+}

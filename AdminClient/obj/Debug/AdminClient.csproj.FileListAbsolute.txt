@@ -1,0 +1,32 @@
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\bin\Debug\AdminClient.exe.config
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\bin\Debug\AdminClient.exe
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\bin\Debug\AdminClient.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\bin\Debug\SchoolLibrary.BusinessModels.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\bin\Debug\SchoolLibrary.BusinessModels.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\obj\Debug\AdminClient.csprojResolveAssemblyReference.cache
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\obj\Debug\MainWindow.g.cs
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\obj\Debug\App.g.cs
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\obj\Debug\AdminClient_MarkupCompile.cache
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\obj\Debug\AdminClient_MarkupCompile.lref
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\obj\Debug\MainWindow.baml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\obj\Debug\AdminClient.g.resources
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\obj\Debug\AdminClient.Properties.Resources.resources
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\obj\Debug\AdminClient.csproj.GenerateResource.Cache
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\obj\Debug\AdminClient.exe
+D:\SoftServe\Lv-098.Net\SchoolLibrary\AdminClient\obj\Debug\AdminClient.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\bin\Debug\AdminClient.exe.config
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\bin\Debug\AdminClient.exe
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\bin\Debug\AdminClient.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\bin\Debug\SchoolLibrary.BusinessModels.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\bin\Debug\SchoolLibrary.BusinessModels.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\obj\Debug\AdminClient.csprojResolveAssemblyReference.cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\obj\Debug\MainWindow.g.cs
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\obj\Debug\App.g.cs
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\obj\Debug\AdminClient_MarkupCompile.cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\obj\Debug\AdminClient_MarkupCompile.lref
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\obj\Debug\MainWindow.baml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\obj\Debug\AdminClient.g.resources
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\obj\Debug\AdminClient.Properties.Resources.resources
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\obj\Debug\AdminClient.csproj.GenerateResource.Cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\obj\Debug\AdminClient.exe
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClient\obj\Debug\AdminClient.pdb

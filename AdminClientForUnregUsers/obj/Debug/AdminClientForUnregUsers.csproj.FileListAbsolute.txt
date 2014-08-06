@@ -1,0 +1,17 @@
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\bin\Debug\AdminClientForUnregUsers.exe.config
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\bin\Debug\AdminClientForUnregUsers.exe
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\bin\Debug\AdminClientForUnregUsers.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\bin\Debug\AdminClient.exe
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\bin\Debug\SchoolLibrary.BusinessModels.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\bin\Debug\AdminClient.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\bin\Debug\SchoolLibrary.BusinessModels.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\obj\Debug\AdminClientForUnregUsers.csprojResolveAssemblyReference.cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\obj\Debug\MainWindow.baml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\obj\Debug\MainWindow.g.cs
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\obj\Debug\App.g.cs
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\obj\Debug\AdminClientForUnregUsers_MarkupCompile.cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\obj\Debug\AdminClientForUnregUsers.g.resources
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\obj\Debug\AdminClientForUnregUsers.Properties.Resources.resources
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\obj\Debug\AdminClientForUnregUsers.csproj.GenerateResource.Cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\obj\Debug\AdminClientForUnregUsers.exe
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\AdminClientForUnregUsers\obj\Debug\AdminClientForUnregUsers.pdb

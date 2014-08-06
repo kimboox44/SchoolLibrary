@@ -1,0 +1,34 @@
+﻿@using SchoolLibrary.BusinessModels.Models
+@model SchoolLibrary.BusinessModels.Models.ItemBusinessModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@if (Model is BookBusinessModel)
+{
+    <h2>Book details</h2>
+    @Html.Partial("_BookDetails");
+}
+else if (Model is MagazineBusinessModel)
+{
+    <h2>Magazine details</h2>
+    @Html.Partial("_MagazineDetails");
+}
+else
+{
+    <h2>Disk details</h2>
+    @Html.Partial("_DiskDetails");
+}
+
+@if (@User.IsInRole("Librarian"))
+    {
+        <div >
+    
+            @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) 
+            
+            
+            
+        </div>
+}
+@Html.ActionLink("Back to List", "IndexWithWidgets")

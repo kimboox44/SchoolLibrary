@@ -1,0 +1,41 @@
+﻿@model SchoolLibrary.BusinessModels.Models.DiskBusinessModel
+
+<div class="display-label">
+    @Html.DisplayNameFor(model => model.Name)
+</div>
+<div class="display-field">
+    @Html.DisplayFor(model => model.Name)
+</div>
+    
+<div class="display-label">
+    @Html.DisplayNameFor(model => model.Year)
+</div>
+<div class="display-field">
+    @Html.DisplayFor(model => model.Year)
+</div>
+    
+<div class="display-label">
+    @Html.DisplayNameFor(model => model.Producer)
+</div>
+<div class="display-field">
+    @Html.DisplayFor(model => model.Producer)
+</div>
+    
+<div class="display-label">
+    @Html.DisplayNameFor(model => model.Type)
+</div>
+<div class="display-field">
+    @Html.DisplayFor(model => model.Type)
+</div>
+
+<div class="display-label">
+    @Html.DisplayNameFor(model=>model.Tags)
+</div>
+<div class="display-field">
+    @foreach (var tag in Model.Tags)
+    {
+        <div class="display-field">
+            @Html.DisplayFor(model =>tag.name)
+        </div>
+    }
+</div>

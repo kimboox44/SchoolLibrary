@@ -1,0 +1,27 @@
+﻿@using SchoolLibrary.BusinessModels.Models
+@model IEnumerable<InventoryBusinessModel>
+
+@{
+    ViewBag.Title = "AllInventories";
+}
+
+<h2>All inventories list</h2>
+
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqWidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="~/Scripts/json2.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/jqx.base.css" />
+
+    <script type="text/javascript" src="~/Scripts/inventoryGrid.js"></script>
+    }
+<div id="grid"></div>
+<div id="jqxcheckbox"></div>
+<br />
+<div>
+    @Html.ActionLink("Back to all consignments list", "IndexWidgets")
+</div>
+@Html.Partial("_PrintInventory")
+

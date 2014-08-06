@@ -1,0 +1,18 @@
+﻿@model SchoolLibrary.BusinessModels.Models.ItemBusinessModel
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+<div class="control-group">
+
+    <h4>@Html.LabelFor(model => model.Tags)</h4>
+    <div class="inline-tokeninput">
+        <input type="text" id="tagsbox" />
+    </div>
+
+</div>
+
+<div id="create-tag-popup" title="Create new tag" style="display: none">
+
+    <h4>Tag name:</h4>
+    <input type="text" id="tagname" style="width: 95%" />
+
+</div>

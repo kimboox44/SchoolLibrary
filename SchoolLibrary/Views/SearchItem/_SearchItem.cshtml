@@ -1,0 +1,129 @@
+﻿@using MvcPaging;
+@using SchoolLibrary.BusinessModels.Models
+@model IPagedList<SchoolLibrary.BusinessModels.Models.ItemBusinessModel>
+
+@{
+    Layout = null;
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayName("Authors & Publishers")
+        </th>
+        <th>
+            @Html.DisplayName("Item Name")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Year)
+        </th>
+        <th>
+            @Html.DisplayName("Item Type")
+        </th>
+        <th>
+            @Html.DisplayName("Actions")
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @if (item is BookBusinessModel)
+                {
+                    var tt = (item as BookBusinessModel).Authors;
+
+                    foreach (var author in tt)
+                    {
+                    @Html.DisplayFor(modelItem => author.FirstName) @Html.DisplayName(" ")  @Html.DisplayFor(modelItem => author.LastName)<br>
+                    }
+                }
+                else if (item is DiskBusinessModel)
+                {
+                    @Html.DisplayFor(model => (item as DiskBusinessModel).Producer);
+                }
+                else
+                {
+                    @Html.DisplayFor(model => (item as MagazineBusinessModel).Publisher);
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @if (item is BookBusinessModel)
+                {
+                    @Html.Label("Book");
+                }
+                else if (item is DiskBusinessModel)
+                {
+                    @Html.Label("Disk")
+                }
+                else
+                {
+                    @Html.Label("Magazine");
+                }
+            </td>
+            <td>
+
+                @if ((User.IsInRole("Admin")) || (User.IsInRole("Librarian")))
+                {
+                    @Html.ActionLink("Edit ", "Edit", "Book", new { id = item.Id }, new { })
+                    @Html.ActionLink("Delete", "Delete", "Book", new { id = item.Id }, new { }) 
+                }
+                @Html.ActionLink("Details", "Details", "Book", new { id = item.Id }, new { })
+                @if (User.IsInRole("Registered"))
+                {
+                    @Html.ActionLink("Scan", "CreateOrder", "ScannedPage", new { id = item.Id }, new { }) 
+                }
+
+                <a href="#" id="reserve-@item.Id" onclick=" reserveItem(this) ">Reserve</a>
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div class="pager1">
+    @Html.Raw(Ajax.Pager(
+            new Options
+            {
+                PageSize = Model.PageSize,
+                TotalItemCount = Model.TotalItemCount,
+                CurrentPage = Model.PageNumber,
+                ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous", Page = "P" },
+                ItemIcon = new ItemIcon() { First = "icon2-backward", Previous = "icon2-chevron-left", Next = "icon2-chevron-right", Last = "icon2-forward" },
+                TooltipTitles = new TooltipTitles() { Next = "Next page", Previous = "Previous page", Page = "Page {0}." },
+                Size = Size.normal,
+                Alignment = Alignment.centered,
+                IsShowControls = true,
+                IsShowFirstLast = true,
+                CssClass = ""
+            },
+            new AjaxOptions
+            {
+                UpdateTargetId = "grid-list",
+                OnBegin = "beginPaging",
+                OnSuccess = "successPaging",
+                OnFailure = "failurePaging"
+            }, new { controller = "SearchItem", action = "Index", itemName = ViewData["itemName"], allTags = ViewData["tag"] }))
+    <div class="well">
+        Showing <span class="badge badge-success">@Model.ItemStart</span> to <span class="badge badge-success">@Model.ItemEnd</span>
+        of <span class="badge badge-info">@Model.TotalItemCount</span> entries
+    </div>
+</div>
+
+
+<script src="~/Scripts/bootstrap.min.js" type="text/javascript"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+@Scripts.Render("~/bundles/toastr")
+@Styles.Render("~/Content/toastr")
+@Styles.Render("~/Content/themes/base/css")
+
+<script type="text/javascript" src="~/Scripts/reserveItem/reserveItem.js"></script>

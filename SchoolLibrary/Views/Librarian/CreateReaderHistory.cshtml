@@ -1,0 +1,64 @@
+﻿@model SchoolLibrary.BusinessModels.Models.ReaderHistoryBusinessModel
+
+@{
+    ViewBag.Title = "CreateReaderHistory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    if (ViewBag.ErrorMassage != null)
+    {
+        <h2 >@ViewBag.ErrorMassage</h2>
+    }
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset class="well"><h2>CreateReaderHistory</h2>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.InventoryBusiness.Number)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.InventoryBusiness.Number)
+            @Html.ValidationMessageFor(model => model.InventoryBusiness.Number)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StartDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StartDate)
+            @Html.ValidationMessageFor(model => model.StartDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FinishDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FinishDate)
+            @Html.ValidationMessageFor(model => model.FinishDate)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+    @*@Html.ActionLink("Reader history", "ReaderHistory", "Librarian", new {readerId=Request.QueryString["readerId"]  })*@
+
+
+<div id="create-one-confirm" title="Create new ReaderHistory?" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span> New ReaderHistory will be created. Are you shure?</p>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+       <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+    <script type="text/javascript">
+
+    </script>
+       
+}

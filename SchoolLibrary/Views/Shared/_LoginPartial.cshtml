@@ -1,0 +1,22 @@
+﻿
+<div class="nav-collapse">
+    @if (Request.IsAuthenticated) {
+    
+        <ul class="nav pull-right">
+            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class="fix-form"})) {
+                @Html.AntiForgeryToken()
+                <a href="javascript:document.getElementById('logoutForm').submit()" class="btn btn-warning">Log Off</a> 
+            }      
+        </ul>    
+    
+        <p class="navbar-text pull-right" id="top-menu">             
+            Hello @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })                       
+        </p>
+            
+    } else {
+        <ul class="nav pull-right">
+            <li><a href="@Url.Action("Register", "Account")" >Register</a></li> 
+            <li><span class="btn btn-warning" id="LoginPopup">Log In</span></li>       
+        </ul>  
+    }
+</div>

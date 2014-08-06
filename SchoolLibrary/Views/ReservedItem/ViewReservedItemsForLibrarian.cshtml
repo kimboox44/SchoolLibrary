@@ -1,0 +1,27 @@
+﻿
+<h2>Reservation</h2>
+
+<div id="grid"></div>
+
+<div id="delete-one-confirm" title="Delete this reserved item?" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>This reserved item will be deleted. Are you sure?</p>
+</div>
+
+<div id="dialog-modal" title="Information about item">
+    <p id="bookInfo"></p>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/toastr")
+    @Styles.Render("~/Content/toastr")
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+    <script type="text/javascript" src="~/Scripts/reserveItem/gridForLibrarian.js"> </script>
+
+    <link rel="stylesheet" type="text/css" href="~/Content/jqx.base.css" />  
+    <link rel="stylesheet" type="text/css" href="~/Content/reserveItem.css" />
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+}

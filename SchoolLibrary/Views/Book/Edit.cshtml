@@ -1,0 +1,146 @@
+﻿@using System.Web.Mvc.Html
+@using SchoolLibrary.BusinessModels.Models
+@using SchoolLibrary.DataAccess.Entities
+@model SchoolLibrary.BusinessModels.MVCModels.BookWithAuthorsShort
+
+
+@{
+    ViewBag.Title = "EditBookInfo";
+}
+
+<link rel="stylesheet" href="~/Content/token-input-facebook.css" type="text/css" />
+<link rel="stylesheet" href="~/Content/jqx.base.css" type="text/css" />
+
+<h2>EditBookInfo</h2>
+
+
+
+<form  data-bind="submit:save">
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="control-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="controls">
+            @*@Html.EditorFor(model => model.Name)*@
+            @Html.ValidationMessageFor(model => model.Name)
+            <input type="text" data-bind="value: Name" />
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(model => model.Year)
+        </div>
+        <div class="controls">
+            @*@Html.EditorFor(model => model.Year)*@
+            @Html.ValidationMessageFor(model => model.Year)
+            <input type="text" data-bind="value: Year" />
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(model => model.Publisher)
+        </div>
+        <div class="controls">
+            @*@Html.EditorFor(model => model.Publisher)*@
+            @Html.ValidationMessageFor(model => model.Publisher)
+            <input type="text" data-bind="value: Publisher" />
+        </div>
+
+        <div class="control-label">
+            @Html.LabelFor(model => model.PageCount)
+        </div>
+        <div class="controls">
+            @*@Html.EditorFor(model => model.PageCount)*@
+            @Html.ValidationMessageFor(model => model.PageCount)
+            <input type="text" data-bind="value: PageCount" />
+        </div>
+
+
+        <div class="control-group">
+            <div class="control-label">@Html.LabelFor(model => model.Authors)</div>
+
+            <div >
+                @{//Html.TextBoxFor(model => model.AuthorsId, new { id = "combobox"})
+                  }
+                <input id="combobox" type="text" />
+               
+            </div>
+         </div>   
+            @Html.Partial("_ManageTags")
+            
+
+        <div class="control-group">
+            <input type="submit" value="Save" class="btn btn-success"/>
+            
+        </div>
+
+
+    </fieldset>
+</form>
+
+
+
+<div id="jqxwindow">
+    <div>
+
+        <h2>Create Author</h2>
+
+    </div>
+    <div>
+        @using (Ajax.BeginForm("Create", "Author", FormMethod.Post, new AjaxOptions { OnSuccess = "successAdd()" }))
+        {
+
+            @Html.Partial("~/Views/Author/CreatePartial.cshtml", new AuthorBusinessModel())
+
+        }
+
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<div id="addNewTagWindow">
+    
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxcombobox.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="~/Scripts/json2.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxpanel.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.tokeninput.js"></script>
+    <script type="text/javascript" src="~/Scripts/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/ManageAuthors.js"></script>
+    <script type="text/javascript" src="~/Scripts/ManageTags.js"></script>
+    <script type="text/javascript" src="~/ViewModels/BookViewModel.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+       
+        var model = @Html.Raw(Json.Encode(Model));
+        var tags = @Html.Raw(Json.Encode(Model.Tags));
+        
+        $(document).ready(function() { 
+       
+            initAuthorsInput(model);
+            initTagsBox(tags);
+            
+            var BookViewModel = new viewModel(model);
+            ko.applyBindings(BookViewModel);
+        });
+        
+    </script>
+}

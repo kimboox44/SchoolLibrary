@@ -1,0 +1,76 @@
+﻿@model SchoolLibrary.Models.ReaderRecommendationModel
+
+@{
+    ViewBag.Title = "Welcome to School Library";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+            </hgroup>
+            <h3>
+                "We hope that libraries will always exist as places for learners to find information, resources, services, and instruction. But formats, technologies, learning needs, and our schools are evolving. And so are students themselves. Our entire information and communication landscapes have shifted—and this shift will only continue." - Valenza & Johnston (October 2009)               
+            </h3>  
+            <br/><br />
+            
+            @if (Model.Items.Count > 0)
+            {
+                <div>
+                    <h2>Recommended items</h2>
+                    <div>
+                        <ul>
+                            @foreach (var item in Model.Items)
+                            {
+                                <li>
+                                    <div style="float: right; width: 100%">
+                                        <div style="width: 70%; float: left">
+                                            @item.Name
+                                        </div>
+                                        <div style="width: 30%; float: left">
+                                            <a href="#" id="reserve-@item.Id" onclick=" reserveItem(this), itemReserved(this) ">Reserve</a>
+                                            | <a href="#" id="notShow-@item.Id" onclick=" notInterestingClicked(this) ">Not interesting</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            }
+
+        </div>
+        
+    </section>
+}
+
+@section Scripts{
+    @Scripts.Render("~/bundles/toastr")
+    @Styles.Render("~/Content/toastr")
+    <script type="text/javascript" src="~/Scripts/reserveItem/reserveItem.js"></script>
+    <script type="text/javascript">
+        function itemReserved(a)
+        {
+            var id = a.id.replace("reserve-", "");
+            removeRecommendation(id);
+        }
+        
+        function notInterestingClicked(a) {
+            var id = a.id.replace("notShow-", "");
+            removeRecommendation(id);
+        }
+        
+        function removeRecommendation(id) {
+            var reader = @Model.ReaderId;
+            $.ajax({
+                type: "POST",
+                url: "/api/tagsapi/RemoveRecommendation",
+                traditional: true,
+                data: { readerId: reader, itemId: id },
+                success: function() {
+                    document.location.reload();
+                }
+            });
+        }
+    </script>
+}

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<SchoolLibrary.BusinessModels.Models.ConsignmentBusinessModel>
+
+@{
+    ViewBag.Title = "ConsignmentsList";
+}
+
+<h2>Consignments list</h2>
+<p>
+    @Html.ActionLink("Add new consignment", "IndexWithWidgets", "Item")
+</p>
+
+@Html.ActionLink("Go to non JS version", "Index", "Consignment")
+
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqWidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="~/Scripts/json2.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/jqx.base.css" />
+    
+    <script type="text/javascript" src="~/Scripts/consignmentGrid.js"></script>
+}
+<div id="grid"></div>
+<br />
+<p>
+    @Html.ActionLink("Look list of all inventories", "AllInventories")
+</p>
+@Html.Partial("_PrintConsignment")
+

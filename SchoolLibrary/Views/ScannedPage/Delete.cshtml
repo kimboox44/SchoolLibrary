@@ -1,0 +1,58 @@
+﻿@model SchoolLibrary.BusinessModels.Models.ScannedPageBusinessModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+@section featured {
+
+
+<h2>DELETE ORDER</h2>
+<br />
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend></legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrderText)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrderText)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrderDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrderDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExecutionDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExecutionDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsReady)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsReady)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsLocked)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsLocked)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+    }
+    

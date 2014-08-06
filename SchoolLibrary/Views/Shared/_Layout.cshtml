@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - School Library</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+    <style>
+        body { padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */ }
+        .aligntobottom { bottom:0; position:absolute; }
+    </style>
+
+        @Styles.Render("~/Content/bootstrap")
+        @RenderSection("JavaScript", required: false)
+        @Scripts.Render("~/bundles/modernizr")
+        <link href="~/Content/myBootstrap.css" rel="stylesheet" />      
+        <link rel="stylesheet" href="~/Content/details.css" type="text/css" />
+        <link rel="stylesheet" href="~/Content/simplegrid.css" type="text/css" />
+        
+    </head>
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="@Url.Action("Index", "Home")">School Library</a>
+                    <div class="nav-collapse">
+                        <ul class="nav" id="top-menu">
+                            
+                            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+
+                            @if ((User.IsInRole("Registered")) || (User.IsInRole("Librarian")))
+                            {
+                                <li><a href="@Url.Action("Index", "SearchItem")">Search</a></li>
+                                <li><a href="@Url.Action("Index", "ScannedPage")">Scan/Copy</a></li>
+                            }
+
+                            @if ((User.IsInRole("Librarian")))
+                            {
+                                <li><a href="@Url.Action("ViewReservedItemsForLibrarian", "ReservedItem")">Reservation</a></li>
+                                <li><a href="@Url.Action("DeptorsReaders", "Librarian")">Debtors</a></li>
+                                <li><a href="@Url.Action("IndexWithWidgets", "Item")">Items</a></li>
+                                <li><a href="@Url.Action("IndexWidgets", "Consignment")">Consigments</a></li>
+                            }
+                       
+                            @if (User.IsInRole("Registered"))
+                            {
+                                <li><a href="@Url.Action("ViewReservedItemsWidgets", "ReservedItem")">Reservation</a></li>
+                                <li><a href="@Url.Action("ReadrHistory", "Reader")">History</a></li>
+                            }
+                       
+                            <li><a href="@Url.Action("About", "Home")">About</a></li>
+                            <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>                                                           
+                             
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+        <div id="right-bottom-logo" class="navbar navbar-fixed-bottom"><img alt="" src="/images/SoftServe_logo1.png"> </div>
+
+        <div class="container">
+            @if(IsSectionDefined("featured")){
+            <div class="hero-unit">
+                @RenderSection("featured", required: false)
+            </div>
+        }
+        @RenderBody()
+        </div>
+
+        <div id="PopupWrapper"></div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryui")
+        @Scripts.Render("~/Scripts/bootstrap")
+        @Scripts.Render("~/bundles/LoginPopUp")
+
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

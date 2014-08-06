@@ -1,0 +1,56 @@
+﻿@model SchoolLibrary.BusinessModels.Models.MagazineBusinessModel
+
+<div class="display-label">
+    @Html.DisplayNameFor(model => model.Name)
+</div>
+<div class="display-field">
+    @Html.DisplayFor(model => model.Name)
+</div>
+    
+<div class="display-label">
+    @Html.DisplayNameFor(model=>model.Publisher)
+</div>
+<div class="display-field">
+    @Html.DisplayFor(model =>model.Publisher)
+</div>
+    
+<div class="display-label">
+    @Html.DisplayNameFor(model => model.Year)
+</div>
+<div class="display-field">
+    @Html.DisplayFor(model => model.Year)
+</div>
+
+<div class="display-label">
+    @Html.DisplayNameFor(model => model.PageCount)
+</div>
+
+<div class="display-field">
+    @Html.DisplayFor(model => model.PageCount)
+</div>
+    
+<div class="display-label">
+    @Html.DisplayNameFor(model => model.Issue)
+</div>
+    
+<div class="display-field">
+    @Html.DisplayFor(model => model.Issue)
+</div>
+    
+<div class="display-label">
+    Inventory Count
+</div>
+<div class="display-field">
+    @Model.Inventories.Count(a=>a.IsAvailable)
+</div>
+<div class="display-label">
+    @Html.DisplayNameFor(model=>model.Tags)
+</div>
+<div class="display-field">
+    @foreach (var tag in Model.Tags)
+    {
+        <div class="display-field">
+            @Html.DisplayFor(model =>tag.name)
+        </div>
+    }
+</div>

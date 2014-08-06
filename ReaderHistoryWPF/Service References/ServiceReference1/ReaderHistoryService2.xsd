@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SchoolLibrary.BusinessModels.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SchoolLibrary.BusinessModels.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfHistoryBusinessModelForGrid">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistoryBusinessModelForGrid" nillable="true" type="tns:HistoryBusinessModelForGrid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistoryBusinessModelForGrid" nillable="true" type="tns:ArrayOfHistoryBusinessModelForGrid" />
+  <xs:complexType name="HistoryBusinessModelForGrid">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FinishDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReaderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistoryBusinessModelForGrid" nillable="true" type="tns:HistoryBusinessModelForGrid" />
+  <xs:complexType name="ReaderBusinessModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Birthday" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EMail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Preferences" nillable="true" type="tns:ArrayOfTagBusinessModel" />
+      <xs:element minOccurs="0" name="ReaderId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserProfileBusiness" nillable="true" type="tns:UserProfileBusinessModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReaderBusinessModel" nillable="true" type="tns:ReaderBusinessModel" />
+  <xs:complexType name="ArrayOfTagBusinessModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TagBusinessModel" nillable="true" type="tns:TagBusinessModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTagBusinessModel" nillable="true" type="tns:ArrayOfTagBusinessModel" />
+  <xs:complexType name="TagBusinessModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TagBusinessModel" nillable="true" type="tns:TagBusinessModel" />
+  <xs:complexType name="UserProfileBusinessModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Role" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserProfileBusinessModel" nillable="true" type="tns:UserProfileBusinessModel" />
+</xs:schema>

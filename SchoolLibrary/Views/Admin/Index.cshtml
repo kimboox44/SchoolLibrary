@@ -1,0 +1,85 @@
+﻿@model SchoolLibrary.Models.AdminHomeModel
+
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Users</h2>
+
+<p>
+    <a href="#" onclick="deleteSelectedUsers()">Delete selected users</a> | 
+    @Html.ActionLink("View unconfirmed users", "ShowUnconfirmedUsersWidget") |
+    @Html.ActionLink("Page with widgets", "IndexWidgets")
+</p>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                @*@Html.CheckBox("checkAll", new { Id = "checkAll" })*@
+            </th>
+            <th>Login </th>
+            <th>E-mail </th>
+            <th>Creation date </th>
+            <th>Role </th>
+            <th>Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td>
+                    @Html.CheckBox("user", new { Id = "checkBox-" + user.UserId })
+                </td>
+                <td>@user.UserName </td>
+                <td>@user.Email </td>
+                <td>@user.CreationDate </td>
+                <td>
+                    @Html.DropDownListFor(r => user.Role, new SelectList(Model.Roles, user.Role), new { Id = "select-" + user.UserId })
+                </td>
+                <td>
+                    <a href="#" id="delete-@user.UserId" onclick="deleteUser(this)">Delete</a> |
+                    <a href="#" id="resetpass-@user.UserId" onclick="resetPassword(this)">Reset password</a>
+                </td>
+            </tr>  
+        }
+    </tbody>
+</table>
+
+<div id="delete-one-confirm" title="Delete this user?" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>These user will be permanently deleted and cannot be recovered. Are you sure?</p>
+</div>
+
+<div id="delete-multiple-confirm" title="Delete selected users?" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>These users will be permanently deleted and cannot be recovered. Are you sure?</p>
+</div>
+
+<div id="change-role-confirm" title="Change users role?" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>Role of the user will be changed. Are you shure?</p>
+</div>
+
+<div id="reset-password-confirm" title="Reset users password?" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>User password wil be reset and user will be notified via e-mail. Are you shure?</p>
+</div>
+
+@section scripts
+{
+    <style>
+        .ui-dialog .ui-state-error {
+            padding: .3em;
+        }
+
+        .validateTips {
+            border: 1px solid transparent;
+            padding: 0.3em;
+        }
+    </style>
+    
+    <link rel="stylesheet" type="text/css" href="~/Content/jqx.base.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+    <script type="text/javascript" src="~/Scripts/admin/index.js"></script>
+}

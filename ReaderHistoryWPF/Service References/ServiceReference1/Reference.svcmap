@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4bbcc344-5bdb-4373-a1bf-d16370a4438a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:64059/Services/ReaderHistory/ReaderHistoryService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ReaderHistoryService.disco" MetadataType="Disco" ID="f75ca0b2-80e8-4d5e-9081-025834c420ec" SourceId="1" SourceUrl="http://localhost:64059/Services/ReaderHistory/ReaderHistoryService.svc?disco" />
+    <MetadataFile FileName="ReaderHistoryService.xsd" MetadataType="Schema" ID="32ce9148-01fd-45ec-b38c-c481376b2e53" SourceId="1" SourceUrl="http://localhost:64059/Services/ReaderHistory/ReaderHistoryService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ReaderHistoryService1.xsd" MetadataType="Schema" ID="40e8d2c9-6497-4501-a89c-8392a88b7dc3" SourceId="1" SourceUrl="http://localhost:64059/Services/ReaderHistory/ReaderHistoryService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ReaderHistoryService.wsdl" MetadataType="Wsdl" ID="fb7fb2fc-3865-43cd-9b02-82c776ce12e5" SourceId="1" SourceUrl="http://localhost:64059/Services/ReaderHistory/ReaderHistoryService.svc?wsdl" />
+    <MetadataFile FileName="ReaderHistoryService2.xsd" MetadataType="Schema" ID="762cadc7-4540-4853-b1cf-9548d81e4c3a" SourceId="1" SourceUrl="http://localhost:64059/Services/ReaderHistory/ReaderHistoryService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

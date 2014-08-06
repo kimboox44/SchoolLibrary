@@ -1,0 +1,54 @@
+﻿@model SchoolLibrary.BusinessModels.Models.ReaderHistoryBusinessModel
+
+@{
+    ViewBag.Title = "EditReaderHistory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset class="well"><h2>EditReaderHistory</h2>
+
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.ReaderBusiness.ReaderId)
+        @Html.HiddenFor(model => model.InventoryBusiness.InventoryId)
+        @Html.HiddenFor(model => model.InventoryBusiness.IsAvailable)
+
+        <div class="editor-label" >
+            @Html.LabelFor(model => model.StartDate)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.StartDate,new { @readonly="readonly" })
+            @Html.ValidationMessageFor(model => model.StartDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ReturnDate)
+        </div>
+        <div class="editor-field" id ="returnDateField">
+            @Html.EditorFor(model => model.ReturnDate)
+            @Html.ValidationMessageFor(model => model.ReturnDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FinishDate)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.FinishDate,new { @readonly="readonly" })
+            @Html.ValidationMessageFor(model => model.FinishDate)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @*@Html.ActionLink("Back to reader history", "ReaderHistory", new {readerId=Model.ReaderBusiness.ReaderId })*@
+</div>
+
+@section Scripts {
+
+}

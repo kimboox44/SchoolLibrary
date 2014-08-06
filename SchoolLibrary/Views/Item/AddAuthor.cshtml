@@ -1,0 +1,35 @@
+﻿@model IEnumerable<SchoolLibrary.BusinessModels.Models.AuthorBusinessModel>
+
+@{
+    ViewBag.Title = "AddAuthor";
+}
+
+<h2>AddAuthor</h2>
+
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.ActionLink("Add", "AddAuthorConfirmed", new { bookid=@Request.QueryString["bookid"],authorid=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

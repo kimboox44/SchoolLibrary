@@ -1,0 +1,97 @@
+﻿@using SchoolLibrary.BusinessModels.Models
+@using SchoolLibrary.DataAccess.Entities
+@model SchoolLibrary.BusinessModels.Models.DiskBusinessModel
+
+@{
+    ViewBag.Title = "Edit disk information";
+}
+
+<link rel="stylesheet" href="~/Content/token-input-facebook.css" type="text/css" />
+<link rel="stylesheet" href="~/Content/jqx.base.css" type="text/css" />
+
+<h2>Edit information about disk</h2>
+
+<form data-bind="submit:save">
+    @Html.ValidationSummary(true)
+
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="control-label">
+        @Html.LabelFor(model => model.Name)
+    </div>
+    <div class="controls">
+        @* @Html.EditorFor(model => model.Name)*@
+        @Html.ValidationMessageFor(model => model.Name)
+        <input type="text" data-bind="value:Name"/>
+    </div>
+
+    <div class="control-label">
+        @Html.LabelFor(model => model.Year)
+    </div>
+    <div class="controls">
+        @* @Html.EditorFor(model => model.Year)*@
+        @Html.ValidationMessageFor(model => model.Year)
+        <input type="text" data-bind="value:Year"/>
+    </div>
+
+    <div class="control-label">
+        @Html.LabelFor(model => model.Producer)
+    </div>
+    <div class="controls">
+        @*@Html.EditorFor(model => model.Producer)*@
+        @Html.ValidationMessageFor(model => model.Producer)
+        <input type="text" data-bind="value:Producer"/>
+    </div>
+
+    <div class="control-label">
+        @Html.LabelFor(model => model.Type)
+    </div>
+    <div class="controls">
+        @* @Html.EditorFor(model => model.Type)*@
+        @Html.ValidationMessageFor(model => model.Type)
+        <input type="text" data-bind="value:Type"/>
+    </div>
+        
+    @Html.Partial("_ManageTags")
+
+    <div class="control-group">
+        <input type="submit" value="Save" class="btn btn-success"/>   
+    </div>
+</form>
+
+<div>
+    @Html.ActionLink("Back to List", "IndexWithWidgets")
+</div>
+
+<div id="addNewTagWindow">
+    
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.3.min.js"></script>
+    <script src="~/Scripts/jqWidgets/jqx-all.js"></script>
+    <script type="text/javascript" src="~/Scripts/json2.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.tokeninput.js"></script>
+    <script type="text/javascript" src="~/Scripts/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/ManageAuthors.js"></script>
+    <script type="text/javascript" src="~/Scripts/ManageTags.js"></script>
+    <script src="~/ViewModels/DiskViewModel.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        var model = @Html.Raw(Json.Encode(Model));
+        var tags = @Html.Raw(Json.Encode(Model.Tags));
+        
+        $(document).ready(function() { 
+       
+            initTagsBox(tags);
+            
+            var DiskViewModel = new diskViewModel(model);
+            ko.applyBindings(DiskViewModel);
+        });
+    </script>
+}
+
+
+

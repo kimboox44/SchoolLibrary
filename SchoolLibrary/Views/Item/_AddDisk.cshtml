@@ -1,0 +1,38 @@
+﻿@model SchoolLibrary.BusinessModels.Models.DiskBusinessModel
+
+@using (Html.BeginForm("AddDisk","Item")) {
+    @Html.ValidationSummary(true)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Type)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Type)
+            @Html.ValidationMessageFor(model => model.Type)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Producer)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Producer)
+            @Html.ValidationMessageFor(model => model.Producer)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Year)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Year)
+            @Html.ValidationMessageFor(model => model.Year)
+        </div>
+        @Html.Partial("_ManageTags")
+        <p>
+            <input class="btn btn-success" type="submit" value="Create" />
+        </p>
+}

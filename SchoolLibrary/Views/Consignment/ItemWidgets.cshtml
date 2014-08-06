@@ -1,0 +1,38 @@
+﻿@using SchoolLibrary.BusinessModels.Models
+@model IEnumerable<ConsignmentBusinessModel>
+
+@{
+    ViewBag.Title = "ItemConsignments";
+}
+
+<h2>Consignmets list for @ViewBag.ItemName</h2>
+
+<p>
+    @using (Html.BeginForm("AddNewConsignment", "Consignment"))
+    {
+        <input class="btn" type="submit" value="Add new consignment" />
+        <input id="count" name="count" type="text" value="Enter inventory count" style="margin-bottom:0"/>
+        @Html.Hidden("actionName", "ItemWidgets")
+        @Html.Hidden("itemId", (int)ViewBag.ItemId)
+        <span id="message"></span>
+    }
+</p>
+@Html.ActionLink("Go to non JS version", "Item", "Consignment")
+
+<input type="hidden" id="itemId" value="@ViewBag.ItemId" />
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqWidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="~/Scripts/addConsignmentValidate.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/jqx.base.css" />
+
+    <script type="text/javascript" src="~/Scripts/consignmentGridByItemId.js"></script>
+}
+<div id="grid"></div>
+@Html.Partial("_PrintConsignment")
+<br />
+<p>
+    @Html.ActionLink("Look list of all consignments", "IndexWidgets")
+</p>

@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB30ECD1-FEE4-44BF-9115-EC28EE63F15D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SchoolLibrary.DataAccess</RootNamespace>
+    <AssemblyName>SchoolLibrary.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Author.cs" />
+    <Compile Include="Entities\Book.cs" />
+    <Compile Include="Entities\Disk.cs" />
+    <Compile Include="Context\ILibraryContext.cs" />
+    <Compile Include="Entities\Inventory.cs" />
+    <Compile Include="Entities\Item.cs" />
+    <Compile Include="Context\LibraryContext.cs" />
+    <Compile Include="Context\LibraryContextInitializer.cs" />
+    <Compile Include="Entities\Consignment.cs" />
+    <Compile Include="Entities\Magazine.cs" />
+    <Compile Include="Entities\ReaderHistory.cs" />
+    <Compile Include="Entities\ReservedItem.cs" />
+    <Compile Include="Entities\Tag.cs" />
+    <Compile Include="Entities\ScannedPage.cs" />
+    <Compile Include="Entities\TagScore.cs" />
+    <Compile Include="Entities\UserProfile.cs" />
+    <Compile Include="Facades\AuthorFacade.cs" />
+    <Compile Include="Facades\BookAuthorFacade.cs" />
+    <Compile Include="Facades\BookFacade.cs" />
+    <Compile Include="Facades\BookWithAuthorsShortFacade.cs" />
+    <Compile Include="Facades\ConsignmentFacade.cs" />
+    <Compile Include="Facades\DiskFacade.cs" />
+    <Compile Include="Facades\Interfaces\IAuthorFacade.cs" />
+    <Compile Include="Facades\Interfaces\IBookAuthorFacade.cs" />
+    <Compile Include="Facades\Interfaces\IBookFacade.cs" />
+    <Compile Include="Facades\Interfaces\IBookInfoFacade.cs" />
+    <Compile Include="Facades\Interfaces\IBookWithAuthorsShortFacade.cs" />
+    <Compile Include="Facades\Interfaces\IConsignmentFacade.cs" />
+    <Compile Include="Facades\Interfaces\IDiskFacade.cs" />
+    <Compile Include="Facades\Interfaces\IInventoryFacade.cs" />
+    <Compile Include="Facades\Interfaces\IMagazineFacade.cs" />
+    <Compile Include="Facades\Interfaces\IReaderFacade.cs" />
+    <Compile Include="Facades\Interfaces\IReaderHistoryFacade.cs" />
+    <Compile Include="Facades\Interfaces\IReservedItemsFacade.cs" />
+    <Compile Include="Facades\Interfaces\IScannedPageFacade.cs" />
+    <Compile Include="Facades\Interfaces\ISearchBookFacade.cs" />
+    <Compile Include="Facades\Interfaces\ISearchItemFacade.cs" />
+    <Compile Include="Facades\Interfaces\ITagScoresFacade.cs" />
+    <Compile Include="Facades\Interfaces\ITagsFacade.cs" />
+    <Compile Include="Facades\Interfaces\IItemFacade.cs" />
+    <Compile Include="Facades\Interfaces\IUsersFacade.cs" />
+    <Compile Include="Facades\InventoryFacade.cs" />
+    <Compile Include="Facades\ItemFacade.cs" />
+    <Compile Include="Facades\MagazineFacade.cs" />
+    <Compile Include="Facades\ReaderFacade.cs" />
+    <Compile Include="Facades\ReaderHistoryFacade.cs" />
+    <Compile Include="Facades\ReservedItemsFacade.cs" />
+    <Compile Include="Facades\ScannedPageFacade.cs" />
+    <Compile Include="Facades\SearchBookFacade.cs" />
+    <Compile Include="Facades\SearchItemFacade.cs" />
+    <Compile Include="Facades\TagScoresFacade.cs" />
+    <Compile Include="Facades\TagsFacade.cs" />
+    <Compile Include="Facades\UsersFacade.cs" />
+    <Compile Include="Mappers\AuthorMapper.cs" />
+    <Compile Include="Mappers\BookMapper.cs" />
+    <Compile Include="Mappers\BookwithAuthorsShortMapper.cs" />
+    <Compile Include="Mappers\BookWithoutTagsMapper.cs" />
+    <Compile Include="Mappers\ConsignmentMapper.cs" />
+    <Compile Include="Mappers\DiskMapper.cs" />
+    <Compile Include="Mappers\DeptorsReadersMapper.cs" />
+    <Compile Include="Mappers\HistoryMapperForGrid.cs" />
+    <Compile Include="Mappers\IMapper.cs" />
+    <Compile Include="Mappers\InventoryMapper.cs" />
+    <Compile Include="Mappers\ItemMapper.cs" />
+    <Compile Include="Mappers\MagazineMapper.cs" />
+    <Compile Include="Mappers\MapperBase.cs" />
+    <Compile Include="Mappers\ReaderHistoryMapper.cs" />
+    <Compile Include="Mappers\ReaderMapper.cs" />
+    <Compile Include="Mappers\ReservedItemMapper.cs" />
+    <Compile Include="Mappers\ScannedPageMapper.cs" />
+    <Compile Include="Mappers\TagMapper.cs" />
+    <Compile Include="Mappers\TagScoreMapper.cs" />
+    <Compile Include="Mappers\UserProfileMapper.cs" />
+    <Compile Include="Migrations\201310082253009_InitialCreate.cs" />
+    <Compile Include="Migrations\201310082253009_InitialCreate.Designer.cs">
+      <DependentUpon>201310082253009_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310082312365_Test4.cs" />
+    <Compile Include="Migrations\201310082312365_Test4.Designer.cs">
+      <DependentUpon>201310082312365_Test4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201310082315294_Test5.cs" />
+    <Compile Include="Migrations\201310082315294_Test5.Designer.cs">
+      <DependentUpon>201310082315294_Test5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entities\Reader.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="UnitOfWork\LibraryUow.cs" />
+    <Compile Include="UnitOfWork\ILibraryUow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201310082253009_InitialCreate.resx">
+      <DependentUpon>201310082253009_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310082312365_Test4.resx">
+      <DependentUpon>201310082312365_Test4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310082315294_Test5.resx">
+      <DependentUpon>201310082315294_Test5.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolLibrary.BusinessModels\SchoolLibrary.BusinessModels.csproj">
+      <Project>{6eb12b1e-950d-4cc5-8e3a-fdcd1bbfa571}</Project>
+      <Name>SchoolLibrary.BusinessModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SchoolLibrary.ServiceAgents\SchoolLibrary.ServiceAgents.csproj">
+      <Project>{d82a261c-8423-4631-988c-280cb0b4ba8e}</Project>
+      <Name>SchoolLibrary.ServiceAgents</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

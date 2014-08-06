@@ -1,0 +1,85 @@
+﻿@model SchoolLibrary.BusinessModels.Models.ConsignmentBusinessModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<h2>Details</h2>
+
+<fieldset>
+    
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Number)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Number)
+    </div>
+    <div class="display-label">
+        Inventory count
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Inventories.Count)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.ArrivalDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ArrivalDate)
+    </div>
+
+    @if (Model.WriteOffDate.HasValue)
+    {
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.WriteOffDate)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.WriteOffDate)
+        </div>
+    }
+</fieldset>
+<div>
+    @if (!Model.WriteOffDate.HasValue)
+    {
+        using (Html.BeginForm("WriteOff", "Consignment", new { id = Model.Id }, FormMethod.Post, new { onclick = "success" }))
+        {
+            <p>
+                <input class="btn" type="submit" value="WriteOff" />
+            </p>
+        }
+    }
+</div>
+<div>@Html.ActionLink("Inventory List", "InventoriesWidgets", new { id = Model.Id },new { @class = "btn" })</div>
+
+<button class="btn" onclick="print(@Model.Number)" >Print BarCodes</button>
+<br />
+<p>
+    @Html.ActionLink("Back to " + Model.Item.Name + " consignments list", "ItemWidgets", new { id =  @Model.Item.Id}, null )
+</p>
+<p>
+    @Html.ActionLink("Back to all consignments list", "IndexWidgets")
+</p>
+
+@Html.Partial("_PrintConsignment")
+
+@section Scripts {
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqWidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqWidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+    <link rel="stylesheet" href="~/Content/jqx.base.css" type="text/css" />
+    <script type="text/javascript">
+        function success() {
+            return confirm("Are you sure you want to write off this consignment?");
+        }
+
+
+
+        $(document).ready(function () {
+
+            window.initPrint();
+        });
+
+    </script>
+}

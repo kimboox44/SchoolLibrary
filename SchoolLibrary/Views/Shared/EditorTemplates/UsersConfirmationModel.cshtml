@@ -1,0 +1,21 @@
+﻿@model SchoolLibrary.Models.UsersConfirmationModel
+<tr>
+    <td>@Html.CheckBox(Model.UnconfirmedUser.UserName)</td>
+    @Html.HiddenFor(m=>m.UnconfirmedUser.UserId)
+    @Html.HiddenFor(m=>m.CoincidedReaderBusiness.ReaderId)
+    <td>@Model.UnconfirmedUser.UserName</td>
+    @if (Model.CoincidedReaderBusiness != null)
+    {
+        <td>@Model.CoincidedReaderBusiness.FirstName @Model.CoincidedReaderBusiness.LastName</td>
+        <td>
+            @Html.DropDownListFor(m=>m.UnconfirmedUser.Role,new SelectList(Model.ListOfRoles,"Unregistered"))
+        </td>
+    }
+    @if (Model.CoincidedReaderBusiness == null)
+    {
+        <td>Reader with such e-mail does not exist</td>
+        <td>
+            @Html.DropDownListFor(m=>m.UnconfirmedUser.Role,new SelectList(Model.ListOfRoles,"Unregistered"),new {disabled="disabled"})
+        </td>
+    }
+</tr>

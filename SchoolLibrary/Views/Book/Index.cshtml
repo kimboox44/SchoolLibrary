@@ -1,0 +1,55 @@
+﻿@model IEnumerable<SchoolLibrary.BusinessModels.Models.BookBusinessModel>
+
+@{
+    ViewBag.Title = "BookList";
+}
+
+<h2>Book list</h2>
+
+<p>
+    @Html.ActionLink("Add new book", "Add")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publisher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageCount)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        int count = (item.Inventories.Count(i => i.IsAvailable) - item.ReservedItems.Count());
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Publisher)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PageCount)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |
+                @Html.ActionLink("Manage Consignment", "Item", "Consignment", new { id = item.Id }, null) |
+                @Html.ActionLink(count.ToString() , "Index", "Inventory", new { id = item.Id }, null) |
+            </td>
+        </tr>
+    }
+
+</table>

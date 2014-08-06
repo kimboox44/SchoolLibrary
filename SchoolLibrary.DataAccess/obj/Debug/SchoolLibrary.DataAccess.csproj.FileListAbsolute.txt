@@ -1,0 +1,38 @@
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\SchoolLibrary.DataAccess.dll.config
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\SchoolLibrary.DataAccess.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\SchoolLibrary.DataAccess.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\EntityFramework.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\SchoolLibrary.BusinessModels.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\WebMatrix.Data.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\WebMatrix.WebData.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\SchoolLibrary.BusinessModels.pdb
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\EntityFramework.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\WebMatrix.Data.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\WebMatrix.WebData.xml
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\obj\Debug\SchoolLibrary.DataAccess.csprojResolveAssemblyReference.cache
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\obj\Debug\SchoolLibrary.DataAccess.Migrations.InitialCreate.resources
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\obj\Debug\SchoolLibrary.DataAccess.Migrations.Test4.resources
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\obj\Debug\SchoolLibrary.DataAccess.Migrations.Test5.resources
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\obj\Debug\SchoolLibrary.DataAccess.csproj.GenerateResource.Cache
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\obj\Debug\SchoolLibrary.DataAccess.dll
+D:\SoftServe\Lv-098.Net\SchoolLibrary\SchoolLibrary.DataAccess\obj\Debug\SchoolLibrary.DataAccess.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\SchoolLibrary.DataAccess.dll.config
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\SchoolLibrary.DataAccess.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\SchoolLibrary.DataAccess.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\SchoolLibrary.BusinessModels.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\WebMatrix.Data.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\WebMatrix.WebData.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\SchoolLibrary.BusinessModels.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\WebMatrix.Data.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\WebMatrix.WebData.xml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\obj\Debug\SchoolLibrary.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\obj\Debug\SchoolLibrary.DataAccess.Migrations.InitialCreate.resources
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\obj\Debug\SchoolLibrary.DataAccess.Migrations.Test4.resources
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\obj\Debug\SchoolLibrary.DataAccess.Migrations.Test5.resources
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\obj\Debug\SchoolLibrary.DataAccess.csproj.GenerateResource.Cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\obj\Debug\SchoolLibrary.DataAccess.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\obj\Debug\SchoolLibrary.DataAccess.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\SchoolLibrary.ServiceAgents.dll
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\SchoolLibrary.DataAccess\bin\Debug\SchoolLibrary.ServiceAgents.pdb

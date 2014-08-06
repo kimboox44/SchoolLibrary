@@ -1,0 +1,81 @@
+﻿@model SchoolLibrary.Models.ReaderSelfEditModel
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit","Reader",FormMethod.Post)) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Address)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Address)
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Phone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Phone)
+            @Html.ValidationMessageFor(model => model.Phone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EMail)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EMail)
+            @Html.ValidationMessageFor(model => model.EMail)
+        </div>
+        
+        <div>
+            @Html.LabelFor(m => m.TagsId)
+            <div class="inline-tokeninput">
+                @Html.TextBoxFor(m => m.TagsId, new { id = "tagsbox" })
+            </div>
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+        <div>
+            @Html.ActionLink("Go to details", "Details", new { id = Model.Id })
+        </div>
+    </fieldset>
+}
+
+@section Scripts {
+    <link rel="stylesheet" href="~/Content/token-input-facebook.css" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="~/Scripts/jquery.tokeninput.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var id = @Model.Id
+
+            $.ajax({
+                type: "GET",
+                url: "/api/tagsapi/GetReaderPreferences",
+                traditional: true,
+                data: { readerId: id },
+                success: function (tags) {
+                    $("#tagsbox").tokenInput("/api/tagsapi/gettags", {
+                        queryParam: "token",
+                        theme: "facebook",
+                        preventDuplicates: true,
+                        prePopulate: tags
+                    });
+                }
+            });
+        });
+    </script>
+}

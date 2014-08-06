@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SchoolLibrary.Services.UserManagement.UserManagementService"
+    CodeBehind="UserManagementService.cs" %>

@@ -1,0 +1,31 @@
+﻿@model List<SchoolLibrary.Models.UsersConfirmationModel>
+
+@{
+    ViewBag.Title = "UnconfirmedUsers";
+}
+
+<h2>UnconfirmedUsers</h2>
+
+@Html.ActionLink("Return to Admin page", "Index")
+
+@Html.ActionLink("Show page with widgets","ShowUnconfirmedUsersWidget")
+
+@Html.ActionLink("Knockout","ShowUnconfirmedUsersKnockout")
+
+@using (@Html.BeginForm())
+{
+
+    <table class="table table-bordered">
+        <tr>
+            <th></th>
+            <th>Unconfirmed user name</th>
+            <th>Coincide readerBusiness</th>
+            <th>Role for user</th>
+        </tr>
+        
+        @Html.EditorFor(m => Model)
+        
+    </table>
+    
+    <input type="submit" value="Save"/>
+}

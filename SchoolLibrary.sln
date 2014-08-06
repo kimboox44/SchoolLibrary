@@ -1,0 +1,145 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolLibrary", "SchoolLibrary\SchoolLibrary.csproj", "{773285DE-29C3-4C1C-85FC-FC732DA946A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolLibrary.DataAccess", "SchoolLibrary.DataAccess\SchoolLibrary.DataAccess.csproj", "{EB30ECD1-FEE4-44BF-9115-EC28EE63F15D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolLibrary.BusinessLogic", "SchoolLibrary.BusinessLogic\SchoolLibrary.BusinessLogic.csproj", "{DF0F4965-5FBD-409B-AD6C-B9D27ADFAC5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolLibrary.BusinessModels", "SchoolLibrary.BusinessModels\SchoolLibrary.BusinessModels.csproj", "{6EB12B1E-950D-4CC5-8E3A-FDCD1BBFA571}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminClient", "AdminClient\AdminClient.csproj", "{DBA6F386-F0D0-40F9-828E-797F21963F70}"
+	ProjectSection(ProjectDependencies) = postProject
+		{773285DE-29C3-4C1C-85FC-FC732DA946A5} = {773285DE-29C3-4C1C-85FC-FC732DA946A5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminClientForUnregUsers", "AdminClientForUnregUsers\AdminClientForUnregUsers.csproj", "{0C33B372-B920-4703-9137-F970B6ED819B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{773285DE-29C3-4C1C-85FC-FC732DA946A5} = {773285DE-29C3-4C1C-85FC-FC732DA946A5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolLibrary.ServiceAgents", "SchoolLibrary.ServiceAgents\SchoolLibrary.ServiceAgents.csproj", "{D82A261C-8423-4631-988C-280CB0B4BA8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaderHistoryWPF", "ReaderHistoryWPF\ReaderHistoryWPF.csproj", "{F423472A-25FE-4B23-BC2A-FF6EE9E1E3EE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{773285DE-29C3-4C1C-85FC-FC732DA946A5} = {773285DE-29C3-4C1C-85FC-FC732DA946A5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchClientWPF", "SearchClientWPF\SearchClientWPF.csproj", "{634DB331-AA88-48E2-A246-E34701E3E0CB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{773285DE-29C3-4C1C-85FC-FC732DA946A5} = {773285DE-29C3-4C1C-85FC-FC732DA946A5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolLibrary.NUnitTests", "SchoolLibrary.NUnitTests\SchoolLibrary.NUnitTests.csproj", "{2690C1EF-622D-4E00-AB5D-922B458BBE04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrarianClient", "LibrarianClient\LibrarianClient.csproj", "{6E2C4E56-C70E-4806-A014-9CF91A7830AD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{773285DE-29C3-4C1C-85FC-FC732DA946A5} = {773285DE-29C3-4C1C-85FC-FC732DA946A5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolLibrary.Tests", "SchoolLibrary.Tests\SchoolLibrary.Tests.csproj", "{13DE2E64-A501-4B72-9FD0-A660575B1E24}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 13
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://195.160.232.178:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SchoolLibrary\\SchoolLibrary.csproj
+		SccProjectName1 = SchoolLibrary
+		SccLocalPath1 = SchoolLibrary
+		SccProjectUniqueName2 = SchoolLibrary.DataAccess\\SchoolLibrary.DataAccess.csproj
+		SccProjectName2 = SchoolLibrary.DataAccess
+		SccLocalPath2 = SchoolLibrary.DataAccess
+		SccProjectUniqueName3 = SchoolLibrary.BusinessLogic\\SchoolLibrary.BusinessLogic.csproj
+		SccProjectName3 = SchoolLibrary.BusinessLogic
+		SccLocalPath3 = SchoolLibrary.BusinessLogic
+		SccProjectUniqueName4 = SchoolLibrary.BusinessModels\\SchoolLibrary.BusinessModels.csproj
+		SccProjectName4 = SchoolLibrary.BusinessModels
+		SccLocalPath4 = SchoolLibrary.BusinessModels
+		SccProjectUniqueName5 = AdminClient\\AdminClient.csproj
+		SccProjectName5 = AdminClient
+		SccLocalPath5 = AdminClient
+		SccProjectUniqueName6 = ReaderHistoryWPF\\ReaderHistoryWPF.csproj
+		SccProjectName6 = ReaderHistoryWPF
+		SccLocalPath6 = ReaderHistoryWPF
+		SccProjectUniqueName7 = SchoolLibrary.ServiceAgents\\SchoolLibrary.ServiceAgents.csproj
+		SccProjectName7 = SchoolLibrary.ServiceAgents
+		SccLocalPath7 = SchoolLibrary.ServiceAgents
+		SccProjectUniqueName8 = SearchClientWPF\\SearchClientWPF.csproj
+		SccProjectName8 = SearchClientWPF
+		SccLocalPath8 = SearchClientWPF
+		SccProjectUniqueName9 = AdminClientForUnregUsers\\AdminClientForUnregUsers.csproj
+		SccProjectName9 = AdminClientForUnregUsers
+		SccLocalPath9 = AdminClientForUnregUsers
+		SccProjectUniqueName10 = SchoolLibrary.NUnitTests\\SchoolLibrary.NUnitTests.csproj
+		SccProjectName10 = SchoolLibrary.NUnitTests
+		SccLocalPath10 = SchoolLibrary.NUnitTests
+		SccProjectUniqueName11 = LibrarianClient\\LibrarianClient.csproj
+		SccProjectName11 = LibrarianClient
+		SccLocalPath11 = LibrarianClient
+		SccProjectUniqueName12 = SchoolLibrary.Tests\\SchoolLibrary.Tests.csproj
+		SccProjectName12 = SchoolLibrary.Tests
+		SccLocalPath12 = SchoolLibrary.Tests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{773285DE-29C3-4C1C-85FC-FC732DA946A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{773285DE-29C3-4C1C-85FC-FC732DA946A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{773285DE-29C3-4C1C-85FC-FC732DA946A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{773285DE-29C3-4C1C-85FC-FC732DA946A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB30ECD1-FEE4-44BF-9115-EC28EE63F15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB30ECD1-FEE4-44BF-9115-EC28EE63F15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB30ECD1-FEE4-44BF-9115-EC28EE63F15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB30ECD1-FEE4-44BF-9115-EC28EE63F15D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF0F4965-5FBD-409B-AD6C-B9D27ADFAC5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF0F4965-5FBD-409B-AD6C-B9D27ADFAC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF0F4965-5FBD-409B-AD6C-B9D27ADFAC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF0F4965-5FBD-409B-AD6C-B9D27ADFAC5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EB12B1E-950D-4CC5-8E3A-FDCD1BBFA571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EB12B1E-950D-4CC5-8E3A-FDCD1BBFA571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB12B1E-950D-4CC5-8E3A-FDCD1BBFA571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EB12B1E-950D-4CC5-8E3A-FDCD1BBFA571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA6F386-F0D0-40F9-828E-797F21963F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA6F386-F0D0-40F9-828E-797F21963F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA6F386-F0D0-40F9-828E-797F21963F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA6F386-F0D0-40F9-828E-797F21963F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C33B372-B920-4703-9137-F970B6ED819B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C33B372-B920-4703-9137-F970B6ED819B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C33B372-B920-4703-9137-F970B6ED819B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C33B372-B920-4703-9137-F970B6ED819B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D82A261C-8423-4631-988C-280CB0B4BA8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D82A261C-8423-4631-988C-280CB0B4BA8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D82A261C-8423-4631-988C-280CB0B4BA8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D82A261C-8423-4631-988C-280CB0B4BA8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F423472A-25FE-4B23-BC2A-FF6EE9E1E3EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F423472A-25FE-4B23-BC2A-FF6EE9E1E3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F423472A-25FE-4B23-BC2A-FF6EE9E1E3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F423472A-25FE-4B23-BC2A-FF6EE9E1E3EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{634DB331-AA88-48E2-A246-E34701E3E0CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634DB331-AA88-48E2-A246-E34701E3E0CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{634DB331-AA88-48E2-A246-E34701E3E0CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{634DB331-AA88-48E2-A246-E34701E3E0CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2690C1EF-622D-4E00-AB5D-922B458BBE04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2690C1EF-622D-4E00-AB5D-922B458BBE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2690C1EF-622D-4E00-AB5D-922B458BBE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2690C1EF-622D-4E00-AB5D-922B458BBE04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E2C4E56-C70E-4806-A014-9CF91A7830AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E2C4E56-C70E-4806-A014-9CF91A7830AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E2C4E56-C70E-4806-A014-9CF91A7830AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E2C4E56-C70E-4806-A014-9CF91A7830AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13DE2E64-A501-4B72-9FD0-A660575B1E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13DE2E64-A501-4B72-9FD0-A660575B1E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13DE2E64-A501-4B72-9FD0-A660575B1E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13DE2E64-A501-4B72-9FD0-A660575B1E24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

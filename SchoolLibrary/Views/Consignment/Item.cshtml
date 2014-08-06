@@ -1,0 +1,98 @@
+﻿@using SchoolLibrary.BusinessModels.Models
+@model IEnumerable<ConsignmentBusinessModel>
+
+@{
+    ViewBag.Title = "ItemConsignments";
+}
+
+
+<h2>Consignmets list for @ViewBag.ItemName</h2>
+
+<p>
+    @using (Html.BeginForm("AddNewConsignment", "Consignment"))
+    {
+        <input class="btn" type="submit" value="Add new consignment" />
+        <input id="count" name="count" type="text" value="Enter inventory count" style="margin-bottom:0"/>
+         @Html.Hidden("actionName", "Item")
+        @Html.Hidden("itemId",(int)ViewBag.ItemId)
+        <span id="message"></span>
+    }
+</p>
+
+@Html.ActionLink("Go to JavaScript version", "ItemWidgets", "Consignment", new { id =  @ViewBag.ItemId}, null)
+<table class="simplegrid">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArrivalDate)
+        </th>
+        <th>Inventory Count
+        </th>
+        <th>WriteOff Date
+        </th>
+        
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalDate)
+            </td>
+            <td >
+                @item.Inventories.Count()
+            </td>
+            <td>
+                @if (item.WriteOffDate.HasValue)
+                {@Html.DisplayFor(modelItem => item.WriteOffDate)}
+                else
+                {
+                    using (Html.BeginForm("WriteOff", "Consignment", new { id = item.Id }, FormMethod.Post, new { onclick = "success", style = "margin-bottom:0" }))
+                    {
+                        <input class="btn" type="submit" value="WriteOff" />
+                    }
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.Id },new { @class="btn"})
+            </td>
+            <td>
+                <button class="btn" onclick="print(@item.Number)" >Print BarCodes</button>
+            </td>
+            <td>
+                @Html.ActionLink("Inventory List", "Inventories", new { id = item.Id }, new { @class="btn"})
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+<p>
+    @Html.ActionLink("Look list of all consignments", "Index")
+</p>
+
+@Html.Partial("_PrintConsignment")
+@section Scripts {
+        <script type="text/javascript" src="~/Scripts/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="~/Scripts/jqWidgets/jqxcore.js"></script>
+<script type="text/javascript" src="~/Scripts/jqWidgets/jqxwindow.js"></script>
+<script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+    <link rel="stylesheet" href="~/Content/jqx.base.css" type="text/css" />
+    <script type="text/javascript" src="~/Scripts/addConsignmentValidate.js"></script>
+    <script type="text/javascript">
+        function success() {
+            return confirm("Are you sure you want to write off this consignment?");
+        }
+
+        $(document).ready(function () {
+
+            window.initPrint();
+        });
+
+    </script>
+}

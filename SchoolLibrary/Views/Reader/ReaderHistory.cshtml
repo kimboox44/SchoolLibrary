@@ -1,0 +1,46 @@
+﻿@using MvcPaging;
+@*@model List<SchoolLibrary.BusinessLogic.Models.BookBusinessModel>*@
+@model List<SchoolLibrary.BusinessModels.Models.ReaderHistoryBusinessModel>
+
+
+@*@model PagedList.IPagedList<SchoolLibrary.BusinessLogic.Models.BookBusinessModel>*@
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section JavaScript
+{
+   <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")"></script>
+   <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")"></script>
+}
+
+@using (Ajax.BeginForm("ReaderHistory", "Reader",
+                            new AjaxOptions { UpdateTargetId = "grid-list", HttpMethod = "get", LoadingElementId = "loading", OnBegin = "beginPaging", OnSuccess = "successPaging", OnFailure = "failurePaging" },
+                            new { id = "frm-search"}))
+{
+    <h2>ReaderHistory</h2>
+    
+
+    <div id="grid-list" class="well">
+        @{ Html.RenderPartial("HistoryList", Model); }
+    </div>
+}
+<script type="text/javascript">
+
+    function beginPaging(args) {
+        // Animate
+        $('#grid-list').fadeOut('normal');
+    }
+
+    function successPaging() {
+        // Animate
+        $('#grid-list').fadeIn('normal');
+        $('a').tooltip();
+    }
+
+    function failurePaging() {
+        alert("Could not retrieve list.");
+    }
+
+</script>

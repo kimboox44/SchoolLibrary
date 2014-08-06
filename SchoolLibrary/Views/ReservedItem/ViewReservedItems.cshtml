@@ -1,0 +1,102 @@
+﻿@model List<SchoolLibrary.BusinessModels.Models.ReservedItemBusinessModel>
+
+@{
+    
+    if (Model != null)
+    {
+        
+        
+    @Html.ActionLink("Widget version |", "ViewReservedItemsWidgets")
+    @Html.ActionLink(" Knockout", "ViewReservedItemsKnockout")
+
+    <h2>Reserved items of user @string.Format("{0} {1}", Model[0].Reader.FirstName, Model[0].Reader.LastName) </h2>
+    
+    <table class="table table-bordered table-hover">
+
+
+        <thead>
+            <tr style="background-color: aqua">
+                <th>@Html.CheckBox("checkAll", new { id = "CheckAll", onchange = "checkAll()" }) </th>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Date of reservation</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                string colour = string.Empty;
+
+                colour = item.IsReady ? "#B1FC9A" : "#FCC39A";
+
+                <tr style="background-color: @colour">
+                    <td>
+                        @Html.CheckBox("reservedBook", new { Id = "checkBox-" + item.Id, onchange = "setButtonVisible()", @class = "bookCheck" })
+                    </td>
+
+                    <td>
+
+                        @Html.DisplayFor(modelItem => item.Category)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+
+                    <td>
+                        <a href="#" id="info-@item.Item.Id" onclick=" viewItemInfo(this) ">Info</a> |
+                        <a href="#" id="delete-@item.Id" onclick=" deleteReservedItem(this) ">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    
+    
+    <input type="button" id="deleteButton" onclick=" deleteReservedItems() " value="Delete checked" style="display: none" />
+
+    }
+    else
+    {
+    <h2>There are no reserved items</h2>
+    }
+  
+    <div>
+        @Html.ActionLink("Back to home page", "Index", "Home")
+    </div>
+    
+}
+
+<div id="delete-one-confirm" title="Delete this reserved item?" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>This reserved item will be deleted. Are you sure?</p>
+</div>
+
+<div id="delete-multiple-confirm" title="Delete selected reserved items?" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>These reserved item will be deleted. Are you sure?</p>
+</div>
+
+<div id="dialog-modal" title="Information about item">
+    <p id="bookInfo"></p>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/toastr")
+    @Styles.Render("~/Content/toastr")
+
+    <script type="text/javascript" src="~/Scripts/reserveItem/reserveItem.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="~/Content/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+
+}

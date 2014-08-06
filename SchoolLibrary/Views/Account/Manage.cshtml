@@ -1,0 +1,30 @@
+﻿@model SchoolLibrary.Models.LocalPasswordModel
+@{
+    ViewBag.Title = "Manage Account";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+</hgroup>
+
+<p class="message-success">@ViewBag.StatusMessage</p>
+
+<p>You're logged in as <strong>@User.Identity.Name</strong>.</p>
+@if (ViewBag.CurrentReaderId != 0)
+{
+    @Html.ActionLink("View my reader information", "Details", "Reader", new { id = ViewBag.CurrentReaderId }, null)
+}
+
+@if (ViewBag.HasLocalPassword)
+{
+    @Html.Partial("_ChangePasswordPartial")
+}
+else
+{ 
+    @Html.Partial("_SetPasswordPartial")
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

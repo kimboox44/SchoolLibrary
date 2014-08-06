@@ -1,0 +1,74 @@
+﻿@using SchoolLibrary.BusinessModels.Models
+@model List<SchoolLibrary.BusinessModels.Models.ItemBusinessModel>
+
+@{
+    ViewBag.Title = "ItemList";
+}
+
+<h2>Item list</h2>
+
+<p>
+    @Html.ActionLink("Add new item", "Add") | @Html.ActionLink("Manage Authors", "Index", "Author")
+</p>
+
+@Html.ActionLink("Go to JS version","IndexWithWidgets")
+
+<table class="table table-bordered">
+    <tr>
+        <th>Name
+        </th>
+        <th>Year
+        </th>
+        <th>Publisher/Producer</th>
+        <th>Type of Item</th>
+        <th>Inventory count</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        int count = (item.Inventories.Count(i => i.IsAvailable) - item.ReservedItems.Count());
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @if (item is BookBusinessModel)
+                {
+                    @Html.DisplayFor(model => (item as BookBusinessModel).Publisher);
+                }
+                else if (item is DiskBusinessModel)
+                {
+                    @Html.DisplayFor(model => (item as DiskBusinessModel).Producer);
+                }
+                else
+                {
+                    @Html.DisplayFor(model => (item as MagazineBusinessModel).Publisher);
+                }
+            </td>
+            <td>
+                @if (item is BookBusinessModel)
+                {
+                    @Html.Label("Book");
+                }
+                else if (item is DiskBusinessModel)
+                {
+                    @Html.Label("Disk")
+                }
+                else
+                {
+                    @Html.Label("Magazine");
+                }
+            </td>
+            <td>@count.ToString()</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Manage consignment", "Item", "Consignment", new { id = item.Id }, null)
+            </td>
+        </tr>
+    }
+</table>
+

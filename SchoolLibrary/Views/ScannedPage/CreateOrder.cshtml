@@ -1,0 +1,83 @@
+﻿@model SchoolLibrary.BusinessModels.Models.ScannedPageBusinessModel
+
+@{
+    ViewBag.Title = "Create Order";
+    <script type="text/javascript">
+
+        letJS['data-let-phone'] = function (event, unchanged) {
+            if (!this.value) {
+                this.value = event.rule;
+            }
+            if (unchanged) {
+                if (event.type === 'blur') {
+                    if (this.value === event.rule) {
+                        this.value = '';
+                    }
+                    return;
+                } else {
+                    this.focus();
+                }
+            } else if (event.insertValue) {
+                var parts = event.insertValue.split('');
+                for (var i = 0; i < parts.length; i++) {
+                    this.value = this.value.replace(/^([^_]+)_/, '$1' + parts[i]);
+                }
+            } else if (event.cropValue) {
+                this.value = this.value.replace(/(\+7.*)\d([^\d]*)$/, '$1_$2');
+            }
+            var pos = this.value.indexOf('_');
+            event.selection(pos > 0 ? pos : this.value.length);
+            return false;
+        };
+
+
+</script>
+}
+
+@{string type = Request.QueryString["id"];
+       
+  }
+
+@section featured {
+
+<h2>CREATE ORDER FOR SCAN OR COPY</h2>
+<br />
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend></legend>
+
+        <div class="editor-label">
+            <strong>@Html.DisplayNameFor(model => model.Item.Name)</strong> : @Html.DisplayFor(model => model.Item.Name)
+        </div>
+        <br />
+        <div class="editor-label">
+           <strong>@Html.LabelFor(model => model.OrderText)</strong>
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.OrderText, new { style = "width: 300px; height: 100px;" } )
+            @Html.ValidationMessageFor(model => model.OrderText)
+            
+        </div>
+        <p>
+            @*<input type="text" data-let-input="/^[0-9]+$/" data-let-phone="+7 (___) ___-__-__" placeholder="Валідація" />*@
+            <input type="submit" value="Create Order" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+    }
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+
+

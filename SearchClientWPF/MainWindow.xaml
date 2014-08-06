@@ -1,0 +1,76 @@
+﻿<Window x:Class="SearchClientWPF.MainWindow"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School Library WPF client" Height="450" Width="625"
+        Icon="/Content/images/book_icon.ico">
+    <ScrollViewer >
+        <Grid>
+            <Grid.Resources>
+                <DataTemplate x:Key="xAuthorTempl">
+                    <ItemsControl ItemsSource="{Binding Authors}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0} {1}">
+                                            <Binding Path="FirstName" />
+                                            <Binding Path="LastName" />
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </DataTemplate>
+
+                <Style x:Key="titleText" TargetType="{x:Type TextBlock}">
+                    <Setter Property="DockPanel.Dock" Value="Top"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="Margin" Value="10,5,10,0"/>
+                </Style>
+
+            </Grid.Resources>
+
+            <xctk:BusyIndicator Name="busyIndicator">
+                <xctk:BusyIndicator.BusyContent>
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Center">Please wait...</TextBlock>
+                        <Button Content="Abort" Name="btnAbort" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </xctk:BusyIndicator.BusyContent>
+
+                <xctk:BusyIndicator.Content>
+                    <StackPanel>
+
+                        <TextBlock Grid.Column="0"
+                          Grid.Row="0" 
+                          Grid.ColumnSpan="4"
+                          Margin="15,5,10,5"
+                          HorizontalAlignment="Left"
+                          Style="{StaticResource titleText}">SEARCH BOOKS IN SCHOOL LIBRARY
+                        </TextBlock>
+
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Name="findTextBox" Margin="15,3,3,3" Width="250" Height="25" />
+                            <Button Content="Search" Name="btnFindButton"  Margin="10,5,5,5" Width="50" Height="25"/>
+                        </StackPanel>
+
+                        <DataGrid ItemsSource="{Binding Path=Collection}" AutoGenerateColumns="False" Name="grdData" ColumnWidth="*">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="№" Binding="{Binding Path=Id}" IsReadOnly="True" />
+                                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" IsReadOnly="true"/>
+                                <DataGridTemplateColumn Header="Authors" CellTemplate="{StaticResource xAuthorTempl}" />
+                                <DataGridTextColumn Header="Publisher" Binding="{Binding Path=Publisher}" IsReadOnly="true" />
+                                <DataGridTextColumn Header="Pages" Binding="{Binding Path=PageCount}" IsReadOnly="true" />
+                                <DataGridTextColumn Header="Year" Binding="{Binding Path=Year}" IsReadOnly="true" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </xctk:BusyIndicator.Content>
+            </xctk:BusyIndicator>
+        </Grid>
+    </ScrollViewer >
+</Window>

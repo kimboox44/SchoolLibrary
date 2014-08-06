@@ -1,0 +1,32 @@
+﻿<Window x:Class="LibrarianClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Readers" Height="350" Width="525" Closing="MainWindow_OnClosing">
+    <Window.Resources>
+        <!-- style to apply to DataGridTextColumn in edit mode  -->
+        <Style x:Key="CellEditStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip"
+                            Value="{Binding RelativeSource={RelativeSource Self},
+                                    Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <DataGrid x:Name="readersDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" DataContext="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
+          ItemsSource="{Binding Readers, Mode=TwoWay}" EnableRowVirtualization="True" AutoGenerateColumns="False" Margin="0,0,0,35">  
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="firstNameColumn" EditingElementStyle="{StaticResource CellEditStyle}" Header="First Name" Binding="{Binding FirstName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}"/>
+                <DataGridTextColumn x:Name="lastNameColumn" EditingElementStyle="{StaticResource CellEditStyle}" Header="Last Name" Binding="{Binding LastName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}"/>
+                <DataGridTextColumn x:Name="addressColumn" EditingElementStyle="{StaticResource CellEditStyle}" Header="Address" Binding="{Binding Address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}"/>
+                <DataGridTextColumn x:Name="birthdayColumn" EditingElementStyle="{StaticResource CellEditStyle}" Header="Birthday" Binding="{Binding Birthday, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}"/>
+                <DataGridTextColumn x:Name="emailColumn" EditingElementStyle="{StaticResource CellEditStyle}" Header="Email" Binding="{Binding EMail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

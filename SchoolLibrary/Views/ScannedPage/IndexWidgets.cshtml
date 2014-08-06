@@ -1,0 +1,89 @@
+﻿@using SchoolLibrary.BusinessModels.Models
+@model IEnumerable<SchoolLibrary.BusinessModels.Models.ScannedPageBusinessModel>
+
+@{
+    ViewBag.Title = "Scan & Copy Page in School Library";
+}
+@section featured {
+<h2>INFORMATION ABOUT SCANNING AND COPYNG PAGES</h2>
+<br />
+
+@if (!@User.IsInRole("Librarian")) 
+{
+        @Html.ActionLink("Create New", "Index", "SearchItem")
+}
+<span style="text-align: right; margin-left: 50px;">@Html.ActionLink("Go to Old version", "Index", "ScannedPage")</span>
+<div id="grid"></div>
+    }
+<br /><br />
+<div id="delete-one-confirm" title="Delete this order?" style="display: none">
+    <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>These order will be permanently deleted and cannot be recovered. Are you sure?</p>
+</div>
+
+
+
+@section scripts
+{
+    <style>
+        .ui-dialog .ui-state-error {
+            padding: .3em;
+        }
+
+        .validateTips {
+            border: 1px solid transparent;
+            padding: 0.3em;
+        }
+    </style>
+    
+    <link rel="stylesheet" type="text/css" href="~/Content/jqx.base.css" />
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+
+    <script type="text/javascript" src="../../scripts/json2.js"></script> 
+    <script type="text/javascript" src="../../scripts/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.3.min.js"></script>
+
+    <script type="text/javascript" src="https://flexicontent.googlecode.com/svn-history/r1574/trunk/com_flexicontent_v2.x/site/librairies/jquery/js/jquery-ui-1.9.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.1.0.min.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/knockout.validation.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.8/jquery.validate.js" type="text/javascript"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.validate.unobtrusive.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/ViewModels/ScannedPageViewModel.js"></script>
+}
+
+<div id="jqxwindowedit">
+    <div>
+        <h2>EDIT ORDER DETAILS</h2>
+    </div>
+    <div>
+        <form id ="form1">
+        <p>First Name: <input data-bind="value: OrderText"
+                                      data-val="true"                          
+                                      data-val-required="This field is required" 
+                                      data-val-regex="Incorrect first name" 
+                                      id="OrderText" name="OrderText"
+                                      class="text-box single-line" /></p>
+             <span class="field-validation-valid" data-valmsg-for="OrderText" data-valmsg-replace="true"></span>
+
+            @if (User.IsInRole("Librarian") || User.IsInRole("Admin"))
+            {
+             <p>IsReady: <input type="checkbox" data-bind="checked:IsReady" data-val="true" id="IsReady" name="IsReady" /></p>
+
+             <p>IsLocked: <input type="checkbox" data-bind="checked:IsLocked" data-val="true" id="IsLocked" name="IsLocked" /></p>
+                
+             <p>Message: <input data-bind="value: Message"
+                                      data-val="true"
+                                      data-val-required="This field is required"
+                                      data-val-regex="Incorrect Message"
+                                      id="Message" name="Message"
+                                      class="text-box single-line" /></p>
+              <span class="field-validation-valid" data-valmsg-for="Message" data-valmsg-replace="true"></span>   
+            }
+            <button  data-bind="click: save">Save</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+﻿@using SchoolLibrary.BusinessModels.Models
+@model IEnumerable<SchoolLibrary.BusinessModels.Models.ItemBusinessModel>
+
+@{
+    ViewBag.Title = "SEARCH ITEMS IN SCHOOL LIBRARY";
+}
+
+@section scripts
+{
+   <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-2.0.3.min.js")"></script>
+   <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")"></script>
+}
+
+@section featured {
+
+<h2>SEARCH BOOKS, MAGAZINES AND DISKS</h2>
+<br />
+
+@using (Ajax.BeginForm("Index", "Search",
+                            new AjaxOptions { UpdateTargetId = "grid-list", HttpMethod = "get", LoadingElementId = "loading", OnBegin = "beginPaging", OnSuccess = "successPaging", OnFailure = "failurePaging" },
+                            new { id = "frm-search" }))
+{
+    <div class="input-append2">
+        <input class="myspan2" id="appendedInputButton" type="text" name="itemName" placeholder="Name" />
+        <button class="btn2" type="submit"><i class="icon2-search"></i>&nbsp;Search</button>
+
+       <strong style="margin-left: 50px;">Tags:</strong> @Html.DropDownList("allTags", "All Tags")
+         &nbsp;&nbsp;@Html.ActionLink("Refresh ", "Index", "SearchItem")
+
+    </div>
+    
+
+
+    <div id="grid-list">
+        @{ Html.RenderPartial("_SearchItem", Model); }
+    </div>
+
+}
+
+<script type="text/javascript">
+
+    function beginPaging(args) {
+        // Animate
+        $('#grid-list').fadeOut('normal');
+
+        
+    }
+
+    function successPaging() {
+        // Animate
+        $('#grid-list').fadeIn('normal');
+        $('a').tooltip();
+        
+        
+    }
+
+    function failurePaging() {
+        alert("Could not retrieve list.");
+    }
+
+</script>
+    }

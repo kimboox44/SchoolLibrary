@@ -1,0 +1,61 @@
+﻿@model SchoolLibrary.BusinessModels.Models.InventoryBusinessModel
+
+@{
+    ViewBag.Title = "Inventory edit";
+}
+
+<h2>Inventory edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        
+
+        @Html.HiddenFor(model => model.InventoryId)
+        @Html.HiddenFor(model => model.ItemId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsAvailable)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsAvailable)
+            @Html.ValidationMessageFor(model => model.IsAvailable)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index", new { id = Model.ItemId })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @*<script type="text/javascript">
+        $(document).ready(function () {
+            var isActiveInput = $("#IsActive"),
+                isAvailableInput = $("#IsAvailable");
+
+            var initializeInputs = function () {
+                if (!isActiveInput.is(":checked")) {
+                    isAvailableInput.attr("checked", false).attr("disabled", true);
+                }
+            };
+
+            isActiveInput.on("change", function () {
+                if ($(this).is(":checked")) {
+                    isAvailableInput.attr("checked", true).attr("disabled", false);
+                } else {
+                    isAvailableInput.attr("checked", false).attr("disabled", true);
+                }
+            });
+
+            initializeInputs();
+        });
+    </script>*@
+}

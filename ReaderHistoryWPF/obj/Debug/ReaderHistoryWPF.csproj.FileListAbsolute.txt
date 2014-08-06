@@ -1,0 +1,14 @@
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\ReaderHistoryWPF\bin\Debug\ReaderHistoryWPF.exe.config
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\ReaderHistoryWPF\bin\Debug\ReaderHistoryWPF.exe
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\ReaderHistoryWPF\bin\Debug\ReaderHistoryWPF.pdb
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\ReaderHistoryWPF\obj\Debug\ReaderHistoryWPF.csprojResolveAssemblyReference.cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\ReaderHistoryWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\ReaderHistoryWPF\obj\Debug\App.g.cs
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\ReaderHistoryWPF\obj\Debug\ReaderHistoryWPF_MarkupCompile.cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\ReaderHistoryWPF\obj\Debug\ReaderHistoryWPF_MarkupCompile.lref
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\ReaderHistoryWPF\obj\Debug\MainWindow.baml
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\ReaderHistoryWPF\obj\Debug\ReaderHistoryWPF.g.resources
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\ReaderHistoryWPF\obj\Debug\ReaderHistoryWPF.Properties.Resources.resources
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\ReaderHistoryWPF\obj\Debug\ReaderHistoryWPF.csproj.GenerateResource.Cache
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\ReaderHistoryWPF\obj\Debug\ReaderHistoryWPF.exe
+C:\Users\Yura\Documents\Visual Studio 2012\Projects\SchoolLibrary\ReaderHistoryWPF\obj\Debug\ReaderHistoryWPF.pdb

@@ -1,0 +1,264 @@
+﻿@using SchoolLibrary.BusinessModels.Models
+@model IEnumerable<InventoryBusinessModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Inventory list for @(((BookBusinessModel)ViewBag.Book).Name)</h2>
+
+<div>
+    @using (Ajax.BeginForm("Add", "Inventory", FormMethod.Post, new AjaxOptions { OnSuccess = "successAdd" }))
+    {
+        <input type="submit" value="Add new consignment" />
+        <input id="count" name="count" type="text" value="Enter inventory count" />
+        @Html.Hidden("bookId", ((BookBusinessModel)ViewBag.Book).Id)
+        <span id="message"></span>
+    }
+</div>
+
+<div id="jqxwindow">
+    <div>
+
+        <h2>Print</h2>
+       
+    </div>
+    <div>
+        <object data="" id="objpdf" type="application/pdf">
+  
+</object>
+
+    </div>
+</div>
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/addconsignmentvalidate.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqWidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqWidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="~/Scripts/json2.js"></script> 
+    <script type="text/javascript" src="~/Scripts/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/knockout.validation.js"></script>
+    <script type="text/javascript" src="https://flexicontent.googlecode.com/svn-history/r1574/trunk/com_flexicontent_v2.x/site/librairies/jquery/js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.iframe-transport.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.fileupload.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.fileupload-ui.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/initfileuplaod.js")"></script> 
+    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/jqx.base.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    @*<script type ="text/javascript" src="@Url.Content("~/Scripts/jquery-ui-1.9.2min.js")"></script>*@
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqx-all.js"></script>
+
+    <script type="text/javascript">
+
+        function successAdd() {
+            alert("asd");
+           
+            
+            $("#jqxwindow").jqxWindow("open");
+            //$.ajax({
+            //    type: 'GET',
+            //    url: '/api/barcodeapi/getbarcodeconsignment',
+            //    contentType: 'application/pdf',
+                
+            //});
+            document.getElementById('objpdf').data = '/api/barcodeapi/getbarcodeconsignment?number=1';
+
+        }
+
+        $(document).ready(function () {
+
+            $("#jqxwindow").jqxWindow({ height: 700, width: 800, isModal: true, autoOpen: false });
+            alert("windowload");
+
+            $("#jqxwindow3").jqxWindow({ width: 500, isModal: true, autoOpen: false });
+            // prepare the data
+            var source =
+                {
+                    datatype: 'json',
+                    datafields: [
+                        { name: 'InventoryId', type: 'int' },
+                        { name: 'Number', type: 'string' },
+                        { name: 'IsAvailable', type: 'bool' },
+                        { name: 'WriteOffDate', type: 'datetime' }
+                    ],
+                    url: '/Inventory/GetInventory?id=@ViewBag.Book.Id',
+                    sort: function () {
+                        $('#grid').jqxGrid('updatebounddata', 'sort');
+                    },
+                    root: 'Rows',
+                    beforeprocessing: function (data) {
+                        source.rows = data.Rows;
+                        source.totalrecords = data.TotalRows;
+                    }
+                };
+            var dataAdapter = new $.jqx.dataAdapter(source);
+
+
+            // initialize jqxGrid
+            $('#grid').jqxGrid(
+                {
+                    width: 800,
+                    source: dataAdapter,
+                    sortable: true,
+                    pageable: true,
+                    autoheight: true,
+                    virtualmode: true,
+                    rendergridrows: function (obj) {
+                        return obj.data;
+                    },
+                    columnsresize: true,
+                    columns: [
+                        { text: 'Inventory Number', datafield: 'Number' },
+                        //  { text: 'ConsignmentId', datafield: 'ConsignmentId' },
+                        { text: 'IsAvailable', datafield: 'IsAvailable', columntype: 'checkbox' },
+                        { text: 'WriteOffDate', datafield: 'WriteOffDate' },
+                        {
+                            text: 'Details', datafield: 'Details', columntype: 'button', sortable: false, width: 100,
+                            cellsrenderer: function () {
+                                return 'Details';
+                            },
+                            buttonclick: function (row) {
+                                var id = $("#grid").jqxGrid('getcellvalue', row, 'InventoryId');
+                                getInventoryDetails(id);
+                                //window.location = '/Inventory/Details/?id=' + id;
+                            }
+                        },
+                        {
+                            text: 'Edit', datafield: 'Edit', columntype: 'button', sortable: false, width: 50,
+                            cellsrenderer: function () {
+                                return 'Edit';
+                            },
+                            buttonclick: function (row) {
+                                var id = $("#grid").jqxGrid('getcellvalue', row, 'InventoryId');
+                                window.location = '/Inventory/Edit/?id=' + id;
+                            }
+                        },
+                        {
+                            text: 'Delete', datafield: 'Delete', columntype: 'button', sortable: false, width: 100,
+                            cellsrenderer: function () {
+                                return 'Delete';
+                            },
+                            buttonclick: function (row) {
+                                var id = $('#grid').jqxGrid('getcellvalue', row, 'InventoryId');
+                                if (confirm('Do you want write off this item?')) {
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/Inventory/Delete/",
+                                        traditional: true,
+                                        data: { id: id },
+                                        success: function () {
+                                            $('#grid').jqxGrid('updatebounddata');
+                                        }
+                                    });
+                                }
+                            }
+                        }
+                    ]
+                });
+
+            $('#jqxcheckbox').bind('change', function (event) {
+                var checked = event.args.checked;
+                $('#log').html('checked: ' + checked);
+            });
+            $('#grid').bind('rowselect', function (event) {
+                var row = event.args.rowindex;
+                //$('#grid').viewGridRow(row, {
+                //    caption: "Inventory Details"
+                //});
+            });
+             });
+
+            var inventory;
+
+            ko.validation.init({ insertMessages: false });
+
+            function InventoryViewModel(data) {
+                this.InventoryId = ko.observable(data.InventoryId);
+                this.Number = ko.observable(data.Number);
+                this.IsAvailable = ko.observable(data.IsAvailable).extend({
+                    required: true,
+                });
+                this.WriteOffDate = ko.observable(data.WriteOffDate);
+
+                //var self = this;
+                //self.save = function () {
+                //    $.ajax("/api/readerapi/update", {
+                //        data: ko.toJSON(this),
+                //        type: "put",
+                //        contentType: "application/json",
+                //        success: function () {
+                //            $('#grid').jqxGrid('updatebounddata');
+                //            $("#jqxwindow4").jqxWindow('close');
+                //        },
+                //        error: function () {
+                //            alert("failed");
+                //        }
+                //    });
+                //    return false;
+                //};
+            }
+        @*            function changeContent(url, window) {
+                window.jqxWindow('setContent', 'Loading...');
+                $.ajax({
+                    dataType: 'html',
+                    url: url,
+                    success: function (data) {
+                        window.jqxWindow('setContent', data);
+                    },
+                    error: function () {
+                        window.jqxWindow('setContent', 'Error');
+                    }
+                });
+            }
+
+            $("#jqxWindow").bind('moving', function (event) {
+                var position = [event.args.x, event.args.y];
+            });
+*@
+    </script> 
+    }  
+    <table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.InventoryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsAvailable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model=>model.WriteOffDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.InventoryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsAvailable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WriteOffDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.InventoryId  }) |
+                @Html.ActionLink("Details", "Details", new { id=item.InventoryId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.InventoryId }) |
+            </td>
+        </tr>
+    }
+</table>
+
+
+
